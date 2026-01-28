@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-blue: #003366;
+  --color-safety-yellow: #FFD700;
+  --color-steel-grey: #f3f4f6;
+  --color-dark-slate: #1e293b;
+  --font-sans: 'Roboto', sans-serif;
+  --font-header: 'Oswald', sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-steel-grey);
+    color: var(--color-dark-slate);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-header);
+    text-transform: uppercase;
+  }
+}
