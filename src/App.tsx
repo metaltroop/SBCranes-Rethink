@@ -1,4 +1,5 @@
 
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StatsStrip from './components/StatsStrip';
 import EquipmentSelector from './components/EquipmentSelector';
@@ -9,6 +10,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-steel-grey font-sans text-dark-slate antialiased selection:bg-safety-yellow selection:text-black">
+      <Navbar />
       <Hero />
       <StatsStrip />
       <EquipmentSelector />

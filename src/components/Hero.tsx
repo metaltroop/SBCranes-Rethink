@@ -1,25 +1,42 @@
-
+import { useState, useEffect } from 'react';
 import { ArrowRight, ChevronRight, Phone } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import heroBg from '../assets/images/hero_bg.png';
+import refineryImg from '../assets/images/refinery_project.png';
+import stadiumImg from '../assets/images/stadium_project.png';
+
+// Placeholder array using existing assets since generation quota was hit
+const heroImages = [heroBg, refineryImg, stadiumImg];
 
 export default function Hero() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+        }, 8000); // Change every 8 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="relative h-screen w-full overflow-hidden bg-dark-slate">
-            {/* Background Image with Overlay */}
-            <div
-                className="absolute inset-0 z-0"
-            >
+            {/* Background Slideshow */}
+            <AnimatePresence mode="popLayout" initial={false}>
                 <motion.div
-                    initial={{ scale: 1.1 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 10, ease: "linear" }}
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${heroBg})` }}
+                    key={currentImageIndex}
+                    initial={{ scale: 1.2, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                        opacity: { duration: 1.5, ease: "easeInOut" },
+                        scale: { duration: 10, ease: "linear" }
+                    }}
+                    className="absolute inset-0 z-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${heroImages[currentImageIndex]})` }}
                 />
-                <div className="absolute inset-0 bg-black/40" /> {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" /> {/* Bottom fade */}
-            </div>
+            </AnimatePresence>
+            <div className="absolute inset-0 z-0 bg-black/40" /> {/* Dark overlay */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" /> {/* Bottom fade */}
 
             {/* Main Content */}
             <div className="relative z-10 flex h-full flex-col justify-between pt-32">
@@ -29,7 +46,7 @@ export default function Hero() {
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="max-w-5xl text-6xl font-bold uppercase leading-[0.9] tracking-tighter text-white md:text-8xl drop-shadow-2xl font-header"
+                            className="max-w-5xl text-5xl sm:text-6xl font-bold uppercase leading-[0.9] tracking-tighter text-white md:text-8xl drop-shadow-2xl font-header"
                         >
                             Lifting With <br />
                             <span className="text-safety-yellow">Precision</span>

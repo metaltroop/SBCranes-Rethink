@@ -39,7 +39,7 @@ export default function EquipmentSelector() {
 
                 <div className="flex flex-col lg:flex-row gap-0 lg:h-[600px] border border-gray-300 shadow-2xl">
                     {/* Tabs Navigation */}
-                    <div className="flex w-full flex-col bg-white lg:w-1/3 border-r border-gray-200">
+                    <div className="flex w-full flex-col bg-white lg:w-1/3 border-b lg:border-b-0 lg:border-r border-gray-200">
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab.id}
