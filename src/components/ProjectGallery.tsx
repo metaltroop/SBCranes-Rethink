@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import refineryImg from '../assets/images/hmel.png';
-import stadiumImg from '../assets/images/jlm.png';
+import stadiumImg from '../assets/images/jlm2.png';
 import crawlerImg from '../assets/images/crawler_crane.png';
 
 export default function ProjectGallery() {
