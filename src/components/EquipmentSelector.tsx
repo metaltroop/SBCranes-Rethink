@@ -31,7 +31,7 @@ export default function EquipmentSelector() {
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
-        let interval: NodeJS.Timeout;
+        let interval: ReturnType<typeof setInterval>;
 
         if (!isHovered) {
             interval = setInterval(() => {

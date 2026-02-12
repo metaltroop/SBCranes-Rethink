@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // Import all logos using Vite's glob import
