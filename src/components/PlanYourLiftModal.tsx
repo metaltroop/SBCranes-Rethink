@@ -1,0 +1,200 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Check } from 'lucide-react';
+
+interface PlanYourLiftModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModalProps) {
+    const [knowsEquipment, setKnowsEquipment] = useState<boolean | null>(null);
+    const [formState, setFormState] = useState({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        company: '',
+        jobTitle: '',
+        country: 'India',
+        address: '',
+        equipment: '',
+        message: ''
+    });
+
+    // Prevent scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isOpen]);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormState(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log('Form Submitted:', formState);
+        // Here you would typically send data to backend
+        onClose();
+        alert("Thank you! Our team will review your requirement and recommend the right solution.");
+    };
+
+    return (
+        <AnimatePresence>
+            {isOpen && (
+                <>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={onClose}
+                        className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm"
+                    />
+                    <motion.div
+                        initial={{ opacity: 0, y: 100, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 100, scale: 0.95 }}
+                        transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
+                        className="fixed inset-0 z-[70] flex items-center justify-center p-4 sm:p-6"
+                        style={{ pointerEvents: 'none' }} // Allow clicks to pass through wrapper to backdrop
+                    >
+                        <div
+                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white shadow-2xl pointer-events-auto" // Re-enable pointer events
+                        >
+                            {/* Header */}
+                            <div className="sticky top-0 z-10 flex items-center justify-between bg-industrial-blue px-6 py-4 text-white">
+                                <div>
+                                    <h2 className="text-2xl font-bold uppercase tracking-tight font-header border-b-4 border-safety-yellow inline-block pb-1">
+                                        Plan Your Lift
+                                    </h2>
+                                    <p className="text-xs text-gray-300 mt-1 uppercase tracking-widest">Connect with our engineering team</p>
+                                </div>
+                                <button
+                                    onClick={onClose}
+                                    className="rounded-full p-2 hover:bg-white/10 transition-colors"
+                                >
+                                    <X className="h-6 w-6" />
+                                </button>
+                            </div>
+
+                            {/* Form Content */}
+                            <div className="p-6 sm:p-8">
+                                <p className="mb-8 text-sm uppercase tracking-wider text-gray-500 font-bold">
+                                    Submit your form and we will get back to you as soon as possible!
+                                </p>
+
+                                <form onSubmit={handleSubmit} className="space-y-6">
+                                    {/* Row 1 */}
+                                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">First Name *</label>
+                                            <input name="firstName" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Last Name *</label>
+                                            <input name="lastName" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                    </div>
+
+                                    {/* Row 2 */}
+                                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Phone *</label>
+                                            <input name="phone" type="tel" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Email Address *</label>
+                                            <input name="email" type="email" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                    </div>
+
+                                    {/* Row 3 */}
+                                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Company *</label>
+                                            <input name="company" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Job Title *</label>
+                                            <input name="jobTitle" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                    </div>
+
+                                    {/* Row 4 & 5 */}
+                                    <div className="grid grid-cols-1 gap-6">
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Select Country *</label>
+                                            <select name="country" className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange}>
+                                                <option>India</option>
+                                                <option>International</option>
+                                            </select>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <label className="text-xs font-bold uppercase text-gray-600">Project Location / Site Address *</label>
+                                            <input name="address" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                        </div>
+                                    </div>
+
+                                    {/* Equipment Question */}
+                                    <div className="bg-steel-grey/30 p-6">
+                                        <p className="mb-4 text-sm font-bold uppercase text-dark-slate">Do you know what type of equipment you need for your job?</p>
+                                        <div className="flex gap-8 mb-4">
+                                            <label className="flex items-center gap-3 cursor-pointer group">
+                                                <div className={`w-5 h-5 border-2 flex items-center justify-center transition-colors ${knowsEquipment === true ? 'border-industrial-blue bg-industrial-blue' : 'border-gray-400 bg-white'}`}>
+                                                    {knowsEquipment === true && <Check className="w-3 h-3 text-white" />}
+                                                </div>
+                                                <input type="radio" name="knowsEquipment" className="hidden" onChange={() => setKnowsEquipment(true)} />
+                                                <span className="text-sm font-medium text-gray-700 group-hover:text-black">Yes, I do. Let me choose.</span>
+                                            </label>
+                                            <label className="flex items-center gap-3 cursor-pointer group">
+                                                <div className={`w-5 h-5 border-2 flex items-center justify-center transition-colors ${knowsEquipment === false ? 'border-industrial-blue bg-industrial-blue' : 'border-gray-400 bg-white'}`}>
+                                                    {knowsEquipment === false && <Check className="w-3 h-3 text-white" />}
+                                                </div>
+                                                <input type="radio" name="knowsEquipment" className="hidden" onChange={() => setKnowsEquipment(false)} />
+                                                <span className="text-sm font-medium text-gray-700 group-hover:text-black">No, I don't. Please advise.</span>
+                                            </label>
+                                        </div>
+
+                                        <AnimatePresence>
+                                            {knowsEquipment === true && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: 'auto', opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    className="overflow-hidden"
+                                                >
+                                                    <div className="space-y-1 pt-2">
+                                                        <label className="text-xs font-bold uppercase text-gray-600">Equipment Type / Model</label>
+                                                        <input name="equipment" placeholder="e.g. 500T Mobile Crane" className="w-full bg-white border border-gray-300 focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <label className="text-xs font-bold uppercase text-gray-600">Message / Additional Details</label>
+                                        <textarea name="message" rows={4} className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors resize-none" onChange={handleChange} />
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        className="w-full bg-industrial-blue py-4 text-white font-bold uppercase tracking-widest hover:bg-blue-900 transition-colors shadow-lg"
+                                    >
+                                        Send Request
+                                    </button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </motion.div>
+                </>
+            )}
+        </AnimatePresence>
+    );
+}

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import heroBg from '../assets/images/hero_bg.png';
@@ -28,9 +28,27 @@ const tabs = [
 
 export default function EquipmentSelector() {
     const [activeTab, setActiveTab] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+
+        if (!isHovered) {
+            interval = setInterval(() => {
+                setActiveTab((prev) => (prev + 1) % tabs.length);
+            }, 30000); // Switch every 30 seconds
+        }
+
+        return () => clearInterval(interval);
+    }, [isHovered]);
 
     return (
-        <section id="fleet" className="bg-steel-grey py-24 text-dark-slate relative z-10">
+        <section
+            id="fleet"
+            className="bg-steel-grey py-24 text-dark-slate relative z-10"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold uppercase tracking-tighter text-industrial-blue md:text-6xl font-header">Our Fleet</h2>
@@ -44,14 +62,25 @@ export default function EquipmentSelector() {
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(index)}
-                                className={`group flex h-full flex-col justify-center border-b border-gray-200 px-10 py-8 text-left transition-all hover:bg-gray-50 bg-white
+                                className={`group relative flex h-full flex-col justify-center border-b border-gray-200 px-10 py-8 text-left transition-all hover:bg-gray-50 bg-white
                 ${activeTab === index ? '!bg-industrial-blue text-white' : ''}`}
                             >
                                 <div className="flex items-center justify-between w-full">
                                     <span className={`text-sm font-bold uppercase tracking-widest mb-2 ${activeTab === index ? 'text-safety-yellow' : 'text-gray-400'}`}>0{index + 1}</span>
                                     {activeTab === index && <motion.div layoutId="activeTabIndicator" className="h-2 w-2 bg-safety-yellow rounded-full" />}
                                 </div>
-                                <span className="text-2xl font-bold uppercase font-header tracking-tighter">{tab.label}</span>
+                                <span className="text-2xl font-bold uppercase font-header tracking-tighter relative z-10">{tab.label}</span>
+
+                                {/* Progress Bar - Moves to active tab */}
+                                {activeTab === index && (
+                                    <motion.div
+                                        key={`${activeTab}-${isHovered ? 'hovered' : 'active'}`}
+                                        initial={{ width: "100%" }}
+                                        animate={{ width: isHovered ? "100%" : "0%" }}
+                                        transition={{ duration: isHovered ? 0.2 : 30, ease: "linear" }}
+                                        className="absolute bottom-0 left-0 h-1.5 bg-safety-yellow z-20"
+                                    />
+                                )}
                             </button>
                         ))}
                         <div className="flex-1 bg-white hidden lg:block" />

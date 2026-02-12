@@ -1,83 +1,78 @@
-
-import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import refineryImg from '../assets/images/refinery_project.png';
-import stadiumImg from '../assets/images/stadium_project.png';
+import { Link } from 'react-router-dom';
+import refineryImg from '../assets/images/hmel.png';
+import stadiumImg from '../assets/images/jlm.png';
 import crawlerImg from '../assets/images/crawler_crane.png';
-
-const projects = [
-    {
-        id: 1,
-        title: 'HMEL Refinery',
-        category: 'Maintenance Support',
-        image: refineryImg,
-        size: 'col-span-1 md:col-span-2 row-span-2', // Large
-    },
-    {
-        id: 2,
-        title: 'JLN Stadium',
-        category: 'Heavy Lift / Structural',
-        image: stadiumImg,
-        size: 'col-span-1 md:col-span-1 row-span-1', // Small
-    },
-    {
-        id: 3,
-        title: 'Wagah Border',
-        category: 'National Flag Installation',
-        image: crawlerImg, // Placeholder
-        size: 'col-span-1 md:col-span-1 row-span-1', // Small
-    },
-];
 
 export default function ProjectGallery() {
     return (
-        <section id="projects" className="bg-white py-24 text-dark-slate">
+        <section id="projects" className="bg-dark-slate py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-16 flex items-end justify-between">
+                <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
                     <div>
-                        <h2 className="text-4xl font-bold uppercase tracking-tighter text-industrial-blue md:text-6xl font-header">Featured Projects</h2>
-                        <div className="mt-4 h-1 w-24 bg-safety-yellow" />
+                        <h2 className="text-4xl font-bold uppercase tracking-tighter text-white font-header md:text-5xl">
+                            Our <span className="text-safety-yellow">Projects</span>
+                        </h2>
+                        <div className="mt-2 h-1 w-24 bg-industrial-blue"></div>
                     </div>
-                    <a href="#" className="hidden text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-industrial-blue md:block transition-colors">View All Projects -&gt;</a>
+                    <Link
+                        to="/projects"
+                        className="group flex items-center gap-2 border-b-2 border-safety-yellow pb-1 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:text-safety-yellow"
+                    >
+                        View All Projects
+                        <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </Link>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6 auto-rows-[300px]">
-                    {projects.map((project) => (
-                        <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className={`group relative overflow-hidden bg-gray-100 ${project.size}`}
-                        >
-                            <div
-                                className="absolute inset-0 bg-cover bg-center grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                                style={{ backgroundImage: `url(${project.image})` }}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[800px] md:h-[600px]">
+                    {/* Project 1 - Large Left */}
+                    <div className="group relative overflow-hidden bg-gray-800 md:col-span-2 md:row-span-2">
+                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${refineryImg})` }}></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90"></div>
+                        <div className="absolute bottom-0 left-0 p-8">
+                            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-safety-yellow">Oil & Gas</span>
+                            <h3 className="text-3xl font-bold uppercase text-white font-header">HMEL Refinery </h3>
+                            <p className="mt-2 text-sm text-gray-300 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-4">
+                                SB Cranes provided long-term mobile crane support at HMEL Refinery for routine maintenance, shutdown activities, and equipment handling across multiple process units.
+                            </p>
+                        </div>
+                    </div>
 
-                            <div className="absolute bottom-0 left-0 w-full p-8 md:p-10">
-                                <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-                                    <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-safety-yellow opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        {project.category}
-                                    </span>
-                                    <h3 className="text-2xl font-bold uppercase leading-tight text-white md:text-4xl font-header">
-                                        {project.title}
-                                    </h3>
-                                </div>
+                    {/* Project 2 - Top Right */}
+                    <div className="group relative overflow-hidden bg-gray-800 md:col-span-2">
+                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${stadiumImg})` }}></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90"></div>
+                        <div className="absolute bottom-0 left-0 p-6">
+                            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-safety-yellow">Infrastructure</span>
+                            <h3 className="text-2xl font-bold uppercase text-white font-header">Stadium Roof Lift</h3>
+                            <p className="mt-2 text-sm text-gray-300 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-4">
+                                SB Cranes was engaged for heavy lifting and crane support during the redevelopment works at JLN Stadium, involving the handling and placement of large structural components.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Project 3 - Bottom Middle */}
+                    <div className="group relative overflow-hidden bg-gray-800">
+                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${crawlerImg})` }}></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90"></div>
+                        <div className="absolute bottom-0 left-0 p-6">
+                            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-safety-yellow">Wind Energy</span>
+                            <h3 className="text-xl font-bold uppercase text-white font-header">Wind Farm Logistics</h3>
+                        </div>
+                    </div>
+
+                    {/* Project 4 - Bottom Right */}
+                    <div className="group relative overflow-hidden bg-industrial-blue flex items-center justify-center">
+                        <div className="text-center p-6">
+                            <h3 className="text-4xl font-bold text-white font-header mb-2">40+</h3>
+                            <p className="text-sm font-medium uppercase tracking-widest text-white/70">Years of Experience</p>
+                            <div className="mt-6">
+                                <Link to="/projects" className="inline-flex items-center justify-center rounded-none bg-white/10 px-6 py-3 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-black">
+                                    Explore Portfolio
+                                </Link>
                             </div>
-
-                            <div className="absolute right-6 top-6 translate-x-10 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                                <div className="flex h-12 w-12 items-center justify-center bg-safety-yellow text-black">
-                                    <ArrowUpRight className="h-6 w-6" />
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <div className="mt-12 text-center md:hidden">
-                    <a href="#" className="text-sm font-bold uppercase tracking-widest text-gray-500 underline decoration-safety-yellow decoration-2 underline-offset-4">View All Projects</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
