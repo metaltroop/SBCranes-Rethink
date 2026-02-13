@@ -95,11 +95,28 @@ export default function Hero() {
                         </p>
 
                         {/* Trust Indicators */}
-                        <div className="mt-6 flex items-center gap-4 pl-6 opacity-30">
+                        <div className="mt-6 flex items-center gap-4 pl-6 opacity-100">
                             <div className="flex -space-x-3">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <div key={i} className="h-10 w-10 rounded-full bg-gray-300 border-2 border-dark-slate flex items-center justify-center text-xs font-bold text-dark-slate">User</div>
-                                ))}
+                                <img
+                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
+                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64"
+                                    alt="Client"
+                                />
+                                <img
+                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
+                                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64"
+                                    alt="Client"
+                                />
+                                <img
+                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64"
+                                    alt="Client"
+                                />
+                                <img
+                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
+                                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=64&h=64"
+                                    alt="Client"
+                                />
                             </div>
                             <div className="flex flex-col">
                                 <div className="flex text-safety-yellow">

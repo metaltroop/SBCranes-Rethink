@@ -12,15 +12,24 @@ export default function FloatingCTA({ onOpenModal }: FloatingCTAProps) {
 
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.scrollY > 500) {
+            // Show if scrolled past 500px OR if on mobile/tablet (< 1280px) where navbar CTA is hidden
+            if (window.scrollY > 500 || window.innerWidth < 1280) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
             }
         };
 
+        // Initial check
+        toggleVisibility();
+
         window.addEventListener('scroll', toggleVisibility);
-        return () => window.removeEventListener('scroll', toggleVisibility);
+        window.addEventListener('resize', toggleVisibility);
+
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+            window.removeEventListener('resize', toggleVisibility);
+        };
     }, []);
 
     return (

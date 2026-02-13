@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroBg from '../assets/images/hero_bg.png';
 import crawlerImg from '../assets/images/crawler_crane.png';
 
@@ -36,7 +37,7 @@ export default function EquipmentSelector() {
         if (!isHovered) {
             interval = setInterval(() => {
                 setActiveTab((prev) => (prev + 1) % tabs.length);
-            }, 30000); // Switch every 30 seconds
+            }, 15000); // Switch every 15 seconds
         }
 
         return () => clearInterval(interval);
@@ -57,19 +58,24 @@ export default function EquipmentSelector() {
 
                 <div className="flex flex-col lg:flex-row gap-0 lg:h-[600px] border border-gray-300 shadow-2xl">
                     {/* Tabs Navigation */}
-                    <div className="flex w-full flex-col bg-white lg:w-1/3 border-b lg:border-b-0 lg:border-r border-gray-200">
+                    <div className="flex w-full flex-row lg:flex-col bg-white lg:w-1/3 border-b lg:border-b-0 lg:border-r border-gray-200 overflow-x-auto no-scrollbar">
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(index)}
-                                className={`group relative flex h-full flex-col justify-center border-b border-gray-200 px-10 py-8 text-left transition-all hover:bg-gray-50 bg-white
-                ${activeTab === index ? '!bg-industrial-blue text-white' : ''}`}
+                                className={`group relative flex-shrink-0 flex flex-row lg:flex-col items-center lg:items-start justify-center lg:justify-center border-r lg:border-r-0 lg:border-b border-gray-200 px-6 py-4 lg:px-10 lg:py-8 text-left transition-all hover:bg-gray-50 bg-white
+                ${activeTab === index ? '!bg-industrial-blue text-white flex-1 lg:flex-none' : 'w-20 lg:w-full'}`}
                             >
-                                <div className="flex items-center justify-between w-full">
-                                    <span className={`text-sm font-bold uppercase tracking-widest mb-2 ${activeTab === index ? 'text-safety-yellow' : 'text-gray-400'}`}>0{index + 1}</span>
-                                    {activeTab === index && <motion.div layoutId="activeTabIndicator" className="h-2 w-2 bg-safety-yellow rounded-full" />}
+                                <div className="flex items-center justify-center lg:justify-between w-auto lg:w-full mr-3 lg:mr-0 lg:mb-2">
+                                    <span className={`text-sm lg:text-sm font-bold uppercase tracking-widest ${activeTab === index ? 'text-safety-yellow' : 'text-gray-400'}`}>0{index + 1}</span>
+                                    {activeTab === index && <motion.div layoutId="activeTabIndicator" className="h-1.5 w-1.5 lg:h-2 lg:w-2 bg-safety-yellow rounded-full ml-2 lg:ml-0 hidden lg:block" />}
                                 </div>
-                                <span className="text-2xl font-bold uppercase font-header tracking-tighter relative z-10">{tab.label}</span>
+
+                                {/* Label - Show only if active on mobile, always on desktop */}
+                                <span className={`text-sm lg:text-2xl font-bold uppercase font-header tracking-tighter relative z-10 whitespace-nowrap lg:whitespace-normal
+                                    ${activeTab === index ? 'block' : 'hidden lg:block'}`}>
+                                    {tab.label}
+                                </span>
 
                                 {/* Progress Bar - Moves to active tab */}
                                 {activeTab === index && (
@@ -77,8 +83,8 @@ export default function EquipmentSelector() {
                                         key={`${activeTab}-${isHovered ? 'hovered' : 'active'}`}
                                         initial={{ width: "100%" }}
                                         animate={{ width: isHovered ? "100%" : "0%" }}
-                                        transition={{ duration: isHovered ? 0.2 : 30, ease: "linear" }}
-                                        className="absolute bottom-0 left-0 h-1.5 bg-safety-yellow z-20"
+                                        transition={{ duration: isHovered ? 0.2 : 15, ease: "linear" }}
+                                        className="absolute bottom-0 left-0 h-1 lg:h-1.5 bg-safety-yellow z-20"
                                     />
                                 )}
                             </button>
@@ -108,37 +114,38 @@ export default function EquipmentSelector() {
                                     />
                                     <div className="absolute inset-0 bg-industrial-blue/20 mix-blend-multiply" />
                                     {/* Diagonal Hazard Stripe Overlay */}
-                                    <div className="absolute top-0 right-0 h-24 w-24 bg-safety-yellow opacity-90 clipping-triangle" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}></div>
+                                    <div className="absolute top-0 right-0 h-16 w-16 lg:h-24 lg:w-24 bg-safety-yellow opacity-90 clipping-triangle" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}></div>
                                 </div>
 
                                 {/* Specs Side */}
-                                <div className="flex w-full flex-col justify-center bg-white p-12 md:w-2/5">
-                                    <h3 className="mb-8 text-3xl font-bold uppercase text-industrial-blue font-header">{tabs[activeTab].label}</h3>
+                                <div className="flex w-full flex-col justify-center bg-white p-6 md:p-12 md:w-2/5">
+                                    <h3 className="mb-6 lg:mb-8 text-2xl lg:text-3xl font-bold uppercase text-industrial-blue font-header">{tabs[activeTab].label}</h3>
 
-                                    <div className="space-y-8">
+                                    <div className="space-y-6 lg:space-y-8">
                                         <div className="border-l-2 border-safety-yellow pl-4">
-                                            <span className="block text-xs uppercase tracking-widest text-gray-400">Capacity</span>
-                                            <span className="text-2xl font-bold text-dark-slate font-header">{tabs[activeTab].specs.capacity}</span>
+                                            <span className="block text-[10px] lg:text-xs uppercase tracking-widest text-gray-400">Capacity</span>
+                                            <span className="text-xl lg:text-2xl font-bold text-dark-slate font-header">{tabs[activeTab].specs.capacity}</span>
                                         </div>
                                         <div className="border-l-2 border-gray-200 pl-4">
-                                            <span className="block text-xs uppercase tracking-widest text-gray-400">Brands</span>
-                                            <span className="text-lg font-medium text-dark-slate">{tabs[activeTab].specs.brands}</span>
+                                            <span className="block text-[10px] lg:text-xs uppercase tracking-widest text-gray-400">Brands</span>
+                                            <span className="text-base lg:text-lg font-medium text-dark-slate">{tabs[activeTab].specs.brands}</span>
                                         </div>
                                         <div className="border-l-2 border-gray-200 pl-4">
-                                            <span className="block text-xs uppercase tracking-widest text-gray-400">Ideal Usage</span>
-                                            <span className="text-lg font-medium text-dark-slate">{tabs[activeTab].specs.usage}</span>
+                                            <span className="block text-[10px] lg:text-xs uppercase tracking-widest text-gray-400">Ideal Usage</span>
+                                            <span className="text-base lg:text-lg font-medium text-dark-slate">{tabs[activeTab].specs.usage}</span>
                                         </div>
                                     </div>
 
-                                    <button className="group mt-12 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-industrial-blue hover:text-safety-yellow transition-colors bg-gray-100 p-4 border border-gray-200 hover:bg-black hover:border-black">
-                                        View Spec Sheet <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-2" />
-                                    </button>
+                                    <Link to="#" className="group mt-8 lg:mt-12 inline-flex items-center gap-3 text-xs lg:text-sm font-bold uppercase tracking-widest text-industrial-blue hover:text-safety-yellow transition-colors bg-gray-100 p-3 lg:p-4 border border-gray-200 hover:bg-black hover:border-black w-fit">
+                                        View Spec Sheet <ArrowRight className="h-3.5 w-3.5 lg:h-4 lg:w-4 transition-transform group-hover:translate-x-2" />
+                                    </Link>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
                     </div>
                 </div>
             </div>
-        </section>
+
+        </section >
     );
 }
