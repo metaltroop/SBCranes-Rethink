@@ -13,7 +13,10 @@ import tata from '../assets/keyLeaders/tataprojects.png';
 import adani from '../assets/keyLeaders/adani.png';
 import ultratech from '../assets/keyLeaders/ultratech.png';
 import gail from '../assets/keyLeaders/GAIL.png';
+
 import powergrid from '../assets/keyLeaders/powergrid.png';
+
+// this is the update 
 
 const projects = [
     {
