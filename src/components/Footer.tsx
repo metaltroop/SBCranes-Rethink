@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import { Download, Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import textureBg from '../assets/images/texture_bg.png';
 
@@ -29,11 +30,11 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-8 text-sm font-bold uppercase tracking-widest text-safety-yellow">Quick Links</h3>
                         <ul className="space-y-4 text-sm font-medium text-gray-300">
-                            <li><a href="#fleet" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Equipment Fleet</a></li>
-                            <li><a href="#projects" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Featured Projects</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Health & Safety</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Careers</a></li>
-                            <li><a href="#contact" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Contact Us</a></li>
+                            <li><Link to="/fleet" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Equipment Fleet</Link></li>
+                            <li><Link to="/projects" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Featured Projects</Link></li>
+                            <li><Link to="/about" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">About Us</Link></li>
+                            <li><Link to="/careers" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Careers</Link></li>
+                            <li><Link to="/contact" className="hover:text-white hover:underline decoration-safety-yellow underline-offset-4 transition-all">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -47,11 +48,17 @@ export default function Footer() {
                             </li>
                             <li className="flex gap-4">
                                 <Phone className="h-6 w-6 text-safety-yellow shrink-0" />
-                                <span>+91 98111 40311</span>
+                                <div>
+                                    <p>+91 98111 40311</p>
+                                    <p>+91 98114 64927</p>
+                                </div>
                             </li>
                             <li className="flex gap-4">
                                 <Mail className="h-6 w-6 text-safety-yellow shrink-0" />
-                                <span>sbcranes25@gmail.com</span>
+                                <div>
+                                    <p>info@sbcranes.in</p>
+                                    <p>sbcranes25@gmail.com</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -62,10 +69,10 @@ export default function Footer() {
                         <p className="mb-6 text-gray-400 text-sm">
                             Get our detailed equipment specification guide and safety certifications.
                         </p>
-                        <button className="flex w-full items-center justify-center gap-3 bg-safety-yellow px-6 py-4 text-sm font-bold uppercase tracking-widest text-black transition-transform hover:translate-y-[-2px] hover:shadow-lg hover:shadow-yellow-500/20">
+                        <Link to="/resources" className="flex w-full items-center justify-center gap-3 bg-safety-yellow px-6 py-4 text-sm font-bold uppercase tracking-widest text-black transition-transform hover:translate-y-[-2px] hover:shadow-lg hover:shadow-yellow-500/20">
                             <Download className="h-5 w-5" />
                             DOWNLOAD BROCHURE
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -73,8 +80,8 @@ export default function Footer() {
                 <div className="pt-8 text-center text-xs font-bold uppercase tracking-widest text-gray-600 sm:text-left flex flex-col sm:flex-row justify-between items-center">
                     <p>&copy; 2026 SB Cranes. Heavy Lifting Solutions.</p>
                     <div className="flex gap-6 mt-4 sm:mt-0">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

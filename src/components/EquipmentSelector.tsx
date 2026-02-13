@@ -136,7 +136,7 @@ export default function EquipmentSelector() {
                                         </div>
                                     </div>
 
-                                    <Link to="#" className="group mt-8 lg:mt-12 inline-flex items-center gap-3 text-xs lg:text-sm font-bold uppercase tracking-widest text-industrial-blue hover:text-safety-yellow transition-colors bg-gray-100 p-3 lg:p-4 border border-gray-200 hover:bg-black hover:border-black w-fit">
+                                    <Link to={`/specs?cat=${tabs[activeTab].id}`} className="group mt-8 lg:mt-12 inline-flex items-center gap-3 text-xs lg:text-sm font-bold uppercase tracking-widest text-industrial-blue hover:text-safety-yellow transition-colors bg-gray-100 p-3 lg:p-4 border border-gray-200 hover:bg-black hover:border-black w-fit">
                                         View Spec Sheet <ArrowRight className="h-3.5 w-3.5 lg:h-4 lg:w-4 transition-transform group-hover:translate-x-2" />
                                     </Link>
                                 </div>
