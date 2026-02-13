@@ -1,11 +1,73 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Check } from 'lucide-react';
+import { X, Check, ChevronDown } from 'lucide-react';
 
 interface PlanYourLiftModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
+
+interface CustomSelectProps {
+    label: string;
+    options: string[];
+    value: string;
+    onChange: (value: string) => void;
+    placeholder?: string;
+}
+
+const CustomSelect = ({ label, options, value, onChange, placeholder = "Select option" }: CustomSelectProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    return (
+        <div className="relative space-y-1" ref={containerRef}>
+            <label className="text-xs font-bold uppercase text-gray-600">{label}</label>
+            <div
+                className={`w-full bg-gray-100 border-b-2 cursor-pointer flex justify-between items-center px-4 py-3 transition-colors ${isOpen ? 'border-industrial-blue bg-white' : 'border-transparent hover:bg-gray-200'}`}
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <span className={value ? 'text-dark-slate' : 'text-gray-400'}>
+                    {value || placeholder}
+                </span>
+                <ChevronDown className={`h-4 w-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+            </div>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute left-0 right-0 top-full z-50 mt-1 max-h-60 overflow-y-auto bg-white shadow-xl border border-gray-100 rounded-b-md"
+                    >
+                        {options.map((option) => (
+                            <div
+                                key={option}
+                                className={`px-4 py-3 cursor-pointer hover:bg-gray-50 text-sm transition-colors ${value === option ? 'bg-blue-50 text-industrial-blue font-bold' : 'text-gray-700'}`}
+                                onClick={() => {
+                                    onChange(option);
+                                    setIsOpen(false);
+                                }}
+                            >
+                                {option}
+                            </div>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+};
 
 export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModalProps) {
     const [knowsEquipment, setKnowsEquipment] = useState<boolean | null>(null);
@@ -16,7 +78,8 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
         email: '',
         company: '',
         jobTitle: '',
-        country: 'India',
+        country: '',
+        serviceType: '',
         address: '',
         equipment: '',
         message: ''
@@ -31,8 +94,12 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
         }
     }, [isOpen]);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
+        setFormState(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSelectChange = (name: string, value: string) => {
         setFormState(prev => ({ ...prev, [name]: value }));
     };
 
@@ -85,7 +152,7 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                             {/* Form Content */}
                             <div className="p-6 sm:p-8">
                                 <p className="mb-8 text-sm uppercase tracking-wider text-gray-500 font-bold">
-                                    Submit your form and we will get back to you as soon as possible!
+                                    Submit your requirement and our team will provide a tailored lifting solution.
                                 </p>
 
                                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -125,38 +192,55 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                                         </div>
                                     </div>
 
-                                    {/* Row 4 & 5 */}
-                                    <div className="grid grid-cols-1 gap-6">
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-bold uppercase text-gray-600">Select Country *</label>
-                                            <select name="country" className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange}>
-                                                <option>India</option>
-                                                <option>International</option>
-                                            </select>
-                                        </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-bold uppercase text-gray-600">Project Location / Site Address *</label>
-                                            <input name="address" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
-                                        </div>
+                                    {/* Row 4: Custom Selects */}
+                                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                        <CustomSelect
+                                            label="Service Interest *"
+                                            placeholder="Select Service"
+                                            value={formState.serviceType}
+                                            onChange={(val) => handleSelectChange('serviceType', val)}
+                                            options={[
+                                                'Mobile Crane Rental',
+                                                'Crawler Crane Rental',
+                                                'Heavy Lifting & Erection',
+                                                'Shutdown Support',
+                                                'Infrastructure Projects',
+                                                'Heavy Cargo / ODC Transport',
+                                                'Other / General Inquiry'
+                                            ]}
+                                        />
+                                        <CustomSelect
+                                            label="Country / Region *"
+                                            placeholder="Select Country"
+                                            value={formState.country}
+                                            onChange={(val) => handleSelectChange('country', val)}
+                                            options={['India', 'Middle East', 'Southeast Asia', 'Africa', 'Other']}
+                                        />
+                                    </div>
+
+                                    {/* Row 5 */}
+                                    <div className="space-y-1">
+                                        <label className="text-xs font-bold uppercase text-gray-600">Project Location / Site Address *</label>
+                                        <input name="address" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
                                     </div>
 
                                     {/* Equipment Question */}
                                     <div className="bg-steel-grey/30 p-6">
-                                        <p className="mb-4 text-sm font-bold uppercase text-dark-slate">Do you know what type of equipment you need for your job?</p>
-                                        <div className="flex gap-8 mb-4">
+                                        <p className="mb-4 text-sm font-bold uppercase text-dark-slate">Do you know what type of equipment you need?</p>
+                                        <div className="flex flex-col sm:flex-row gap-4 mb-4">
                                             <label className="flex items-center gap-3 cursor-pointer group">
                                                 <div className={`w-5 h-5 border-2 flex items-center justify-center transition-colors ${knowsEquipment === true ? 'border-industrial-blue bg-industrial-blue' : 'border-gray-400 bg-white'}`}>
                                                     {knowsEquipment === true && <Check className="w-3 h-3 text-white" />}
                                                 </div>
                                                 <input type="radio" name="knowsEquipment" className="hidden" onChange={() => setKnowsEquipment(true)} />
-                                                <span className="text-sm font-medium text-gray-700 group-hover:text-black">Yes, I do. Let me choose.</span>
+                                                <span className="text-sm font-medium text-gray-700 group-hover:text-black">Yes, I do.</span>
                                             </label>
                                             <label className="flex items-center gap-3 cursor-pointer group">
                                                 <div className={`w-5 h-5 border-2 flex items-center justify-center transition-colors ${knowsEquipment === false ? 'border-industrial-blue bg-industrial-blue' : 'border-gray-400 bg-white'}`}>
                                                     {knowsEquipment === false && <Check className="w-3 h-3 text-white" />}
                                                 </div>
                                                 <input type="radio" name="knowsEquipment" className="hidden" onChange={() => setKnowsEquipment(false)} />
-                                                <span className="text-sm font-medium text-gray-700 group-hover:text-black">No, I don't. Please advise.</span>
+                                                <span className="text-sm font-medium text-gray-700 group-hover:text-black">No, please advise me.</span>
                                             </label>
                                         </div>
 
@@ -169,7 +253,7 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                                                     className="overflow-hidden"
                                                 >
                                                     <div className="space-y-1 pt-2">
-                                                        <label className="text-xs font-bold uppercase text-gray-600">Equipment Type / Model</label>
+                                                        <label className="text-xs font-bold uppercase text-gray-600">Equipment Details</label>
                                                         <input name="equipment" placeholder="e.g. 500T Mobile Crane" className="w-full bg-white border border-gray-300 focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
                                                     </div>
                                                 </motion.div>

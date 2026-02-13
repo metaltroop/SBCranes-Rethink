@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import PlaceholderPage from './pages/PlaceholderPage';
+import ComingSoon from './pages/ComingSoon';
+import Services from './pages/Services';
 import PlanYourLiftModal from './components/PlanYourLiftModal';
 import FloatingCTA from './components/FloatingCTA';
 
@@ -12,12 +14,12 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen w-full overflow-x-hidden bg-steel-grey font-sans text-dark-slate antialiased selection:bg-safety-yellow selection:text-black">
+      <div className="min-h-screen w-full overflow-x-clip bg-steel-grey font-sans text-dark-slate antialiased selection:bg-safety-yellow selection:text-black">
         <Navbar onOpenModal={() => setIsModalOpen(true)} />
         <Routes>
           <Route path="/" element={<Home onOpenModal={() => setIsModalOpen(true)} />} />
           <Route path="/about" element={<PlaceholderPage />} />
-          <Route path="/services" element={<PlaceholderPage />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/fleet" element={<PlaceholderPage />} />
           <Route path="/projects" element={<PlaceholderPage />} />
           <Route path="/careers" element={<PlaceholderPage />} />
