@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
@@ -41,7 +42,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                         {/* Logo */}
                         <Link to="/" className="flex items-center gap-2 group">
                             <div className="h-8 w-8 bg-safety-yellow flex items-center justify-center font-bold text-black text-lg font-header">
-                                SB
+                                <img src={logo} alt="" />
                             </div>
                             <span className="text-xl font-bold uppercase tracking-tighter text-white font-header group-hover:text-safety-yellow transition-colors">
                                 Cranes
