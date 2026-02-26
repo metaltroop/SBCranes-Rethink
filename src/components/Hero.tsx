@@ -13,13 +13,13 @@ export default function Hero() {
 
     const features = [
         {
-            icon: <Truck className="h-8 w-8 text-safety-yellow group-hover:text-black transition-colors duration-300" />,
+            icon: <Truck className="h-8 w-8 text-brand-red group-hover:text-white transition-colors duration-300" />,
             title: "Right Equipment",
             desc: "Modern fleet up to 800 MT capacity",
-            borderColor: "hover:border-safety-yellow",
-            sweepColor: "before:bg-safety-yellow",
-            hoverTextColor: "group-hover:text-black",
-            subTextColor: "group-hover:text-black/80"
+            borderColor: "hover:border-brand-red",
+            sweepColor: "before:bg-brand-red",
+            hoverTextColor: "group-hover:text-white",
+            subTextColor: "group-hover:text-white/80"
         },
         {
             icon: <ShieldCheck className="h-8 w-8 text-emerald-400 group-hover:text-white transition-colors duration-300" />,
@@ -80,7 +80,7 @@ export default function Hero() {
                         >
                             Safe. Reliable. <br />
                             On-Time Lifting & <br />
-                            <span className="text-safety-yellow">Heavy Transport </span> Solutions.
+                            <span className="text-brand-red">Heavy Transport </span> Solutions.
                         </motion.h1>
                     </div>
                     <motion.div
@@ -88,7 +88,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
                     >
-                        <p className="mt-6 max-w-lg text-lg font-light text-gray-200 border-l-4 border-safety-yellow pl-6">
+                        <p className="mt-6 max-w-lg text-lg font-light text-gray-200 border-l-4 border-brand-red pl-6">
                             Crane rental, heavy lifting, erection, and ODC
                             transportation for infrastructure and industrial
                             projects across India.
@@ -119,7 +119,7 @@ export default function Hero() {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex text-safety-yellow">
+                                <div className="flex text-brand-red">
                                     {[1, 2, 3, 4, 5].map((i) => (
                                         <Star key={i} className="h-4 w-4 fill-current" />
                                     ))}

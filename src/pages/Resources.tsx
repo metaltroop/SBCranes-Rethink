@@ -24,7 +24,7 @@ export default function Resources() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-bold uppercase font-header text-white mb-6"
                     >
-                        Brochures & <span className="text-safety-yellow">Resources</span>
+                        Brochures & <span className="text-brand-red">Resources</span>
                     </motion.h1>
                     <p className="text-xl text-gray-300 font-medium">
                         Technical specifications and company information at your fingertips.
@@ -50,9 +50,9 @@ export default function Resources() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group bg-gray-50 hover:bg-white p-6 rounded-xl border border-gray-200 hover:border-safety-yellow hover:shadow-lg transition-all duration-300 flex items-center gap-4 cursor-pointer"
+                                className="group bg-gray-50 hover:bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-red hover:shadow-lg transition-all duration-300 flex items-center gap-4 cursor-pointer"
                             >
-                                <div className="bg-white group-hover:bg-safety-yellow p-4 rounded-lg shadow-sm border border-gray-100 transition-colors duration-300">
+                                <div className="bg-white group-hover:bg-brand-red p-4 rounded-lg shadow-sm border border-gray-100 transition-colors duration-300">
                                     <FileText className="h-6 w-6 text-industrial-blue" />
                                 </div>
                                 <div className="flex-grow">
@@ -74,7 +74,7 @@ export default function Resources() {
 
                         <div className="relative z-10 max-w-3xl mx-auto">
                             <h3 className="text-2xl md:text-4xl font-bold uppercase font-header text-white mb-6">
-                                Need More Details or a <span className="text-safety-yellow">Customized Solution?</span>
+                                Need More Details or a <span className="text-brand-red">Customized Solution?</span>
                             </h3>
                             <p className="text-gray-300 text-lg mb-10 leading-relaxed">
                                 Our engineering team can provide specific load charts, lift plans, and technical advice tailored to your project requirements.
@@ -82,7 +82,7 @@ export default function Resources() {
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <button
                                     onClick={() => document.getElementById('plan-lift-btn')?.click()}
-                                    className="bg-safety-yellow text-black px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2"
+                                    className="bg-brand-red text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2"
                                 >
                                     Contact Engineering <ChevronRight className="h-5 w-5" />
                                 </button>

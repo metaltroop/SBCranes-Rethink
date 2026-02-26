@@ -42,7 +42,7 @@ export default function Fleet() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6"
                     >
-                        Our <span className="text-safety-yellow">Fleet</span>
+                        Our <span className="text-brand-red">Fleet</span>
                     </motion.h1>
                     <p className="text-xl text-gray-300 font-medium">
                         A modern fleet built for safe & reliable heavy lifting.
@@ -56,7 +56,7 @@ export default function Fleet() {
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-industrial-blue text-xs font-bold uppercase tracking-widest mb-4">Fleet Overview</h2>
                     <h3 className="text-3xl md:text-4xl font-bold uppercase font-header text-dark-slate mb-8">
-                        Precision Engineered for <span className="text-safety-yellow">Every Lift</span>
+                        Precision Engineered for <span className="text-brand-red">Every Lift</span>
                     </h3>
                     <p className="text-gray-600 text-lg leading-relaxed mb-10">
                         SB Cranes operates a modern and diverse fleet of cranes and heavy transport equipment designed to deliver safe, efficient, and dependable lifting solutions across infrastructure, industrial, and engineering projects in India. Our fleet is continuously upgraded and meticulously maintained to meet the demands of complex and high-value operations.
@@ -93,7 +93,7 @@ export default function Fleet() {
                                     <ul className="space-y-3">
                                         {category.specs.map((spec, i) => (
                                             <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                                                <div className="w-2 h-2 rounded-full bg-safety-yellow"></div>
+                                                <div className="w-2 h-2 rounded-full bg-brand-red"></div>
                                                 {spec}
                                             </li>
                                         ))}
@@ -104,7 +104,7 @@ export default function Fleet() {
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <button
                                         onClick={() => document.getElementById('plan-lift-btn')?.click()}
-                                        className="bg-safety-yellow text-black px-6 py-3 font-bold uppercase tracking-widest hover:bg-industrial-blue hover:text-white transition-colors text-sm"
+                                        className="bg-brand-red text-white px-6 py-3 font-bold uppercase tracking-widest hover:bg-industrial-blue hover:text-white transition-colors text-sm"
                                     >
                                         Enquire Now
                                     </button>
@@ -127,13 +127,13 @@ export default function Fleet() {
                         <div className="relative z-10">
                             <h3 className="text-2xl font-bold uppercase font-header mb-4">See Our Fleet in Action</h3>
                             <p className="text-gray-300 mb-8">Explore our portfolio of complex lifts and major projects across India.</p>
-                            <a href="/projects" className="inline-flex items-center gap-2 text-safety-yellow font-bold uppercase tracking-widest hover:text-white transition-colors">
+                            <a href="/projects" className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest hover:text-white transition-colors">
                                 Explore Projects <ArrowRight className="h-5 w-5" />
                             </a>
                         </div>
                     </div>
 
-                    <div className="bg-safety-yellow p-10 rounded-2xl text-black text-center relative overflow-hidden group">
+                    <div className="bg-brand-red p-10 rounded-2xl text-white text-center relative overflow-hidden group">
                         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                         <div className="relative z-10">
                             <h3 className="text-2xl font-bold uppercase font-header mb-4">Need the Right Equipment?</h3>

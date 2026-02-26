@@ -53,7 +53,7 @@ export default function EquipmentSelector() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold uppercase tracking-tighter text-industrial-blue md:text-6xl font-header">Our Fleet</h2>
-                    <div className="mt-4 h-1 w-24 bg-safety-yellow" />
+                    <div className="mt-4 h-1 w-24 bg-brand-red" />
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-0 lg:h-[600px] border border-gray-300 shadow-2xl">
@@ -67,8 +67,8 @@ export default function EquipmentSelector() {
                 ${activeTab === index ? '!bg-industrial-blue text-white flex-1 lg:flex-none' : 'w-20 lg:w-full'}`}
                             >
                                 <div className="flex items-center justify-center lg:justify-between w-auto lg:w-full mr-3 lg:mr-0 lg:mb-2">
-                                    <span className={`text-sm lg:text-sm font-bold uppercase tracking-widest ${activeTab === index ? 'text-safety-yellow' : 'text-gray-400'}`}>0{index + 1}</span>
-                                    {activeTab === index && <motion.div layoutId="activeTabIndicator" className="h-1.5 w-1.5 lg:h-2 lg:w-2 bg-safety-yellow rounded-full ml-2 lg:ml-0 hidden lg:block" />}
+                                    <span className={`text-sm lg:text-sm font-bold uppercase tracking-widest ${activeTab === index ? 'text-brand-red' : 'text-gray-400'}`}>0{index + 1}</span>
+                                    {activeTab === index && <motion.div layoutId="activeTabIndicator" className="h-1.5 w-1.5 lg:h-2 lg:w-2 bg-brand-red rounded-full ml-2 lg:ml-0 hidden lg:block" />}
                                 </div>
 
                                 {/* Label - Show only if active on mobile, always on desktop */}
@@ -84,7 +84,7 @@ export default function EquipmentSelector() {
                                         initial={{ width: "100%" }}
                                         animate={{ width: isHovered ? "100%" : "0%" }}
                                         transition={{ duration: isHovered ? 0.2 : 15, ease: "linear" }}
-                                        className="absolute bottom-0 left-0 h-1 lg:h-1.5 bg-safety-yellow z-20"
+                                        className="absolute bottom-0 left-0 h-1 lg:h-1.5 bg-brand-red z-20"
                                     />
                                 )}
                             </button>
@@ -114,7 +114,7 @@ export default function EquipmentSelector() {
                                     />
                                     <div className="absolute inset-0 bg-industrial-blue/20 mix-blend-multiply" />
                                     {/* Diagonal Hazard Stripe Overlay */}
-                                    <div className="absolute top-0 right-0 h-16 w-16 lg:h-24 lg:w-24 bg-safety-yellow opacity-90 clipping-triangle" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}></div>
+                                    <div className="absolute top-0 right-0 h-16 w-16 lg:h-24 lg:w-24 bg-brand-red opacity-90 clipping-triangle" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}></div>
                                 </div>
 
                                 {/* Specs Side */}
@@ -122,7 +122,7 @@ export default function EquipmentSelector() {
                                     <h3 className="mb-6 lg:mb-8 text-2xl lg:text-3xl font-bold uppercase text-industrial-blue font-header">{tabs[activeTab].label}</h3>
 
                                     <div className="space-y-6 lg:space-y-8">
-                                        <div className="border-l-2 border-safety-yellow pl-4">
+                                        <div className="border-l-2 border-brand-red pl-4">
                                             <span className="block text-[10px] lg:text-xs uppercase tracking-widest text-gray-400">Capacity</span>
                                             <span className="text-xl lg:text-2xl font-bold text-dark-slate font-header">{tabs[activeTab].specs.capacity}</span>
                                         </div>
@@ -136,7 +136,7 @@ export default function EquipmentSelector() {
                                         </div>
                                     </div>
 
-                                    <Link to={`/specs?cat=${tabs[activeTab].id}`} className="group mt-8 lg:mt-12 inline-flex items-center gap-3 text-xs lg:text-sm font-bold uppercase tracking-widest text-industrial-blue hover:text-safety-yellow transition-colors bg-gray-100 p-3 lg:p-4 border border-gray-200 hover:bg-black hover:border-black w-fit">
+                                    <Link to={`/specs?cat=${tabs[activeTab].id}`} className="group mt-8 lg:mt-12 inline-flex items-center gap-3 text-xs lg:text-sm font-bold uppercase tracking-widest text-industrial-blue hover:text-brand-red transition-colors bg-gray-100 p-3 lg:p-4 border border-gray-200 hover:bg-black hover:border-black w-fit">
                                         View Spec Sheet <ArrowRight className="h-3.5 w-3.5 lg:h-4 lg:w-4 transition-transform group-hover:translate-x-2" />
                                     </Link>
                                 </div>

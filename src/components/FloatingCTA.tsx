@@ -44,25 +44,25 @@ export default function FloatingCTA({ onOpenModal }: FloatingCTAProps) {
                         onClick={onOpenModal}
                         onHoverStart={() => setIsHovered(true)}
                         onHoverEnd={() => setIsHovered(false)}
-                        className="group flex items-center justify-center bg-safety-yellow text-black border-2 border-transparent hover:border-black/10 shadow-2xl rounded-full overflow-hidden relative h-16"
+                        className="group flex items-center justify-center bg-brand-red text-white border-2 border-transparent hover:border-black/10 shadow-2xl rounded-full overflow-hidden relative h-16"
                         transition={{ type: "spring", stiffness: 400, damping: 25 }}
                     >
                         {/* Icon Container - Always visible/anchored left */}
                         <motion.div
                             layout
-                            className="flex h-16 w-16 items-center justify-center shrink-0 z-20 bg-safety-yellow absolute right-0 top-0"
+                            className="flex h-16 w-16 items-center justify-center shrink-0 z-20 bg-brand-red absolute right-0 top-0"
                         >
-                            <CalendarCheck className="h-8 w-8 text-black group-hover:scale-110 transition-transform duration-300" />
+                            <CalendarCheck className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
 
                         {/* Text Content - Reveals on hover */}
                         <motion.div
-                            className="flex items-center overflow-hidden h-16 pr-16 pl-6 bg-safety-yellow whitespace-nowrap"
+                            className="flex items-center overflow-hidden h-16 pr-16 pl-6 bg-brand-red whitespace-nowrap"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: isHovered ? 1 : 0 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <span className="text-sm font-bold uppercase tracking-wider text-black font-header mr-2">
+                            <span className="text-sm font-bold uppercase tracking-wider text-white font-header mr-2">
                                 Looking for a dependable partner for your project?
                             </span>
                         </motion.div>

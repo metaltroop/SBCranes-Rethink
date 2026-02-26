@@ -37,7 +37,7 @@ export default function Testimonials() {
                         <div key={index} className="relative flex flex-col justify-between bg-white p-8 shadow-lg rounded-xl border-t-4 border-industrial-blue">
                             <Quote className="absolute top-4 right-4 h-12 w-12 text-gray-100 rotate-180" />
 
-                            <div className="flex mb-4 text-safety-yellow">
+                            <div className="flex mb-4 text-brand-red">
                                 {[...Array(testimonial.rating)].map((_, i) => (
                                     <Star key={i} className="h-5 w-5 fill-current" />
                                 ))}

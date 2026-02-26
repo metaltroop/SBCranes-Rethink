@@ -23,7 +23,7 @@ export default function ComingSoon() {
                     initial={{ scale: 0, rotate: -180 }}
                     animate={{ scale: 1, rotate: 0 }}
                     transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                    className="w-24 h-24 bg-safety-yellow rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg shadow-safety-yellow/20"
+                    className="w-24 h-24 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg shadow-brand-red/20"
                 >
                     <HardHat className="w-12 h-12 text-dark-slate" />
                 </motion.div>
@@ -35,7 +35,7 @@ export default function ComingSoon() {
                     transition={{ delay: 0.2 }}
                     className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6 tracking-tight"
                 >
-                    Work in <span className="text-safety-yellow">Progress</span>
+                    Work in <span className="text-brand-red">Progress</span>
                 </motion.h1>
 
                 {/* Subtext */}

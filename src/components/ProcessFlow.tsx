@@ -48,7 +48,7 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
-                        className="block text-sm font-bold uppercase tracking-widest text-safety-yellow mb-2"
+                        className="block text-sm font-bold uppercase tracking-widest text-brand-red mb-2"
                     >
                         How We Work
                     </motion.span>
@@ -67,7 +67,7 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                     {/* Connecting Line (Desktop) */}
                     <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-1 bg-gray-700 -z-0">
                         <motion.div
-                            className="h-full bg-safety-yellow origin-left"
+                            className="h-full bg-brand-red origin-left"
                             initial={{ scaleX: 0 }}
                             animate={isInView ? { scaleX: 1 } : {}}
                             transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -86,19 +86,19 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                             >
                                 {/* Icon Bubble */}
                                 <div className="relative mb-3 lg:mb-6">
-                                    <div className="h-16 w-16 lg:h-20 lg:w-20 rounded-full bg-industrial-blue border-4 border-gray-600 flex items-center justify-center group-hover:border-safety-yellow group-hover:scale-110 transition-all duration-300 shadow-xl">
-                                        <div className="text-safety-yellow group-hover:text-white transition-colors duration-300 transform group-hover:rotate-12">
+                                    <div className="h-16 w-16 lg:h-20 lg:w-20 rounded-full bg-industrial-blue border-4 border-gray-600 flex items-center justify-center group-hover:border-brand-red group-hover:scale-110 transition-all duration-300 shadow-xl">
+                                        <div className="text-brand-red group-hover:text-white transition-colors duration-300 transform group-hover:rotate-12">
                                             {step.icon}
                                         </div>
                                     </div>
                                     {/* Number Badge */}
-                                    <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 h-6 w-6 lg:h-8 lg:w-8 rounded-full bg-safety-yellow flex items-center justify-center text-[10px] lg:text-xs font-bold text-black border-2 border-industrial-blue">
+                                    <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 h-6 w-6 lg:h-8 lg:w-8 rounded-full bg-brand-red flex items-center justify-center text-[10px] lg:text-xs font-bold text-white border-2 border-industrial-blue">
                                         0{step.id}
                                     </div>
                                 </div>
 
                                 {/* Text Content */}
-                                <h3 className="text-sm lg:text-xl font-bold uppercase text-white font-header mb-1 lg:mb-2 group-hover:text-safety-yellow transition-colors">{step.title}</h3>
+                                <h3 className="text-sm lg:text-xl font-bold uppercase text-white font-header mb-1 lg:mb-2 group-hover:text-brand-red transition-colors">{step.title}</h3>
                                 <p className="text-gray-400 text-xs lg:text-sm max-w-[120px] lg:max-w-[200px]">{step.description}</p>
                             </motion.div>
                         ))}
@@ -112,7 +112,7 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                         >
                             {/* Image Bubble */}
                             <div className="relative mb-3 lg:mb-6">
-                                <div className="h-32 w-32 lg:h-40 lg:w-40 rounded-xl lg:rounded-2xl bg-safety-yellow border-4 border-white flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
+                                <div className="h-32 w-32 lg:h-40 lg:w-40 rounded-xl lg:rounded-2xl bg-brand-red border-4 border-white flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
                                     <img
                                         src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400"
                                         alt="Satisfied Client"
@@ -126,7 +126,7 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                             </div>
 
                             {/* Text Content */}
-                            <h3 className="text-sm lg:text-xl font-bold uppercase text-safety-yellow font-header mb-1 lg:mb-2">The Result</h3>
+                            <h3 className="text-sm lg:text-xl font-bold uppercase text-brand-red font-header mb-1 lg:mb-2">The Result</h3>
                             <p className="text-white text-xs lg:text-sm max-w-[140px] lg:max-w-[200px] font-medium italic">"A Confident, Satisfied Client."</p>
                         </motion.div>
                     </div>
@@ -139,7 +139,7 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                         animate={isInView ? { opacity: 1, scale: 1 } : {}}
                         transition={{ duration: 0.5, delay: 1.5 }}
                         onClick={onOpenModal}
-                        className="group inline-flex items-center gap-3 bg-transparent border-2 border-safety-yellow px-8 py-4 text-safety-yellow hover:bg-safety-yellow hover:text-black transition-all duration-300 font-bold uppercase tracking-widest rounded-sm"
+                        className="group inline-flex items-center gap-3 bg-transparent border-2 border-brand-red px-8 py-4 text-brand-red hover:bg-brand-red hover:text-white transition-all duration-300 font-bold uppercase tracking-widest rounded-sm"
                     >
                         Start Your Project
                         <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -102,7 +102,7 @@ export default function SpecSheet() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-bold uppercase font-header text-white mb-4"
                     >
-                        Technical <span className="text-safety-yellow">Specifications</span>
+                        Technical <span className="text-brand-red">Specifications</span>
                     </motion.h1>
                     <p className="text-lg text-gray-300 font-medium">
                         Detailed capabilities and load charts.
@@ -126,15 +126,15 @@ export default function SpecSheet() {
                                         onClick={() => handleTabChange(cat.id)}
                                         className={`group flex items-center justify-between p-4 border-l-4 transition-all duration-200 text-left relative
                                             ${activeTab === cat.id
-                                                ? 'bg-blue-50 border-safety-yellow text-industrial-blue font-bold shadow-inner'
+                                                ? 'bg-blue-50 border-brand-red text-industrial-blue font-bold shadow-inner'
                                                 : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-industrial-blue hover:border-gray-200'}`}
                                     >
                                         <div className="flex items-center gap-3">
-                                            <cat.icon className={`h-5 w-5 flex-shrink-0 ${activeTab === cat.id ? 'text-safety-yellow' : 'text-gray-400'}`} />
+                                            <cat.icon className={`h-5 w-5 flex-shrink-0 ${activeTab === cat.id ? 'text-brand-red' : 'text-gray-400'}`} />
                                             <span className="uppercase text-sm tracking-tight">{cat.label}</span>
                                         </div>
                                         {activeTab === cat.id && (
-                                            <ChevronRight className="h-4 w-4 text-safety-yellow" />
+                                            <ChevronRight className="h-4 w-4 text-brand-red" />
                                         )}
                                     </button>
                                 ))}
@@ -165,7 +165,7 @@ export default function SpecSheet() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark-slate/90 via-transparent to-transparent"></div>
                                     <div className="absolute bottom-6 left-6 md:left-10 z-10">
                                         <div className="flex items-center gap-3 mb-2">
-                                            <div className="bg-safety-yellow p-2 rounded-lg">
+                                            <div className="bg-brand-red p-2 rounded-lg">
                                                 <activeCategory.icon className="h-6 w-6 text-black" />
                                             </div>
                                             <h2 className="text-2xl md:text-4xl font-bold uppercase text-white font-header">
@@ -177,7 +177,7 @@ export default function SpecSheet() {
 
                                 <div className="p-6 md:p-10 space-y-10">
                                     {/* Description */}
-                                    <p className="text-gray-600 text-lg leading-relaxed border-l-4 border-safety-yellow pl-6">
+                                    <p className="text-gray-600 text-lg leading-relaxed border-l-4 border-brand-red pl-6">
                                         {activeCategory.description}
                                     </p>
 
@@ -187,7 +187,7 @@ export default function SpecSheet() {
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             {activeCategory.features.map((feature, i) => (
                                                 <li key={i} className="flex items-center gap-3 text-dark-slate font-medium">
-                                                    <CheckCircle2 className="h-5 w-5 text-safety-yellow flex-shrink-0" />
+                                                    <CheckCircle2 className="h-5 w-5 text-brand-red flex-shrink-0" />
                                                     <span>{feature}</span>
                                                 </li>
                                             ))}
@@ -240,7 +240,7 @@ export default function SpecSheet() {
                                             </a>
                                             <button
                                                 onClick={() => document.getElementById('plan-lift-btn')?.click()}
-                                                className="inline-flex items-center justify-center gap-2 bg-safety-yellow text-black px-8 py-3 font-bold uppercase tracking-widest hover:bg-yellow-400 transition-colors rounded-sm"
+                                                className="inline-flex items-center justify-center gap-2 bg-brand-red text-white px-8 py-3 font-bold uppercase tracking-widest hover:bg-red-500 transition-colors rounded-sm"
                                             >
                                                 Enquire Now
                                             </button>

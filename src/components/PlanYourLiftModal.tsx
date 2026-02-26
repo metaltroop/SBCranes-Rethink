@@ -136,7 +136,7 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                             {/* Header */}
                             <div className="sticky top-0 z-10 flex items-center justify-between bg-industrial-blue px-6 py-4 text-white">
                                 <div>
-                                    <h2 className="text-2xl font-bold uppercase tracking-tight font-header border-b-4 border-safety-yellow inline-block pb-1">
+                                    <h2 className="text-2xl font-bold uppercase tracking-tight font-header border-b-4 border-brand-red inline-block pb-1">
                                         Plan Your Lift
                                     </h2>
                                     <p className="text-xs text-gray-300 mt-1 uppercase tracking-widest">Connect with our engineering team</p>

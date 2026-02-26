@@ -32,21 +32,21 @@ export default function StatsStrip() {
                 <div className="grid grid-cols-3 divide-x divide-white/20 md:divide-x md:divide-y-0">
                     {/* Stat 1 */}
                     <div className="group flex flex-col items-center justify-center py-6 md:py-16 hover:bg-white/5 transition-colors duration-300">
-                        <div className="text-3xl md:text-6xl font-bold font-header text-white group-hover:text-safety-yellow transition-colors">
+                        <div className="text-3xl md:text-6xl font-bold font-header text-white group-hover:text-brand-red transition-colors">
                             <Counter value={100} suffix="+" />
                         </div>
                         <div className="mt-1 md:mt-2 text-[10px] md:text-sm font-medium uppercase tracking-[0.1em] md:tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors text-center">Cranes</div>
                     </div>
                     {/* Stat 2 */}
                     <div className="group flex flex-col items-center justify-center py-6 md:py-16 hover:bg-white/5 transition-colors duration-300">
-                        <div className="text-3xl md:text-6xl font-bold font-header text-white group-hover:text-safety-yellow transition-colors">
+                        <div className="text-3xl md:text-6xl font-bold font-header text-white group-hover:text-brand-red transition-colors">
                             <Counter value={1000} suffix="+" />
                         </div>
                         <div className="mt-1 md:mt-2 text-[10px] md:text-sm font-medium uppercase tracking-[0.1em] md:tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors text-center">Clients</div>
                     </div>
                     {/* Stat 3 */}
                     <div className="group flex flex-col items-center justify-center py-6 md:py-16 hover:bg-white/5 transition-colors duration-300">
-                        <div className="text-3xl md:text-6xl font-bold font-header text-white group-hover:text-safety-yellow transition-colors">
+                        <div className="text-3xl md:text-6xl font-bold font-header text-white group-hover:text-brand-red transition-colors">
                             <Counter value={40} suffix="+" />
                         </div>
                         <div className="mt-1 md:mt-2 text-[10px] md:text-sm font-medium uppercase tracking-[0.1em] md:tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors text-center">Years Exp.</div>

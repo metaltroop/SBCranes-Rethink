@@ -94,7 +94,7 @@ export default function Projects() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6"
                     >
-                        Our <span className="text-safety-yellow">Projects</span>
+                        Our <span className="text-brand-red">Projects</span>
                     </motion.h1>
                     <p className="text-xl text-gray-300 font-medium">
                         Delivering excellence in complex lifting operations across India.
@@ -110,7 +110,7 @@ export default function Projects() {
                         <div className="mb-12">
                             <h2 className="text-industrial-blue text-xs font-bold uppercase tracking-widest mb-4">Portfolio</h2>
                             <h3 className="text-3xl md:text-4xl font-bold uppercase font-header text-dark-slate">
-                                Major <span className="text-safety-yellow">Milestones</span>
+                                Major <span className="text-brand-red">Milestones</span>
                             </h3>
                         </div>
 
@@ -129,14 +129,14 @@ export default function Projects() {
                                         </div>
                                         <div className="w-full md:w-2/3">
                                             <div className="flex flex-wrap gap-4 mb-4 text-xs font-bold uppercase tracking-widest text-gray-500">
-                                                <span className="flex items-center gap-1"><Briefcase className="h-3 w-3 text-safety-yellow" /> {project.category}</span>
-                                                <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-safety-yellow" /> {project.location}</span>
-                                                <span className="flex items-center gap-1"><Calendar className="h-3 w-3 text-safety-yellow" /> {project.year}</span>
+                                                <span className="flex items-center gap-1"><Briefcase className="h-3 w-3 text-brand-red" /> {project.category}</span>
+                                                <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-brand-red" /> {project.location}</span>
+                                                <span className="flex items-center gap-1"><Calendar className="h-3 w-3 text-brand-red" /> {project.year}</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold uppercase font-header text-industrial-blue mb-4 group-hover:text-safety-yellow transition-colors">
+                                            <h3 className="text-2xl font-bold uppercase font-header text-industrial-blue mb-4 group-hover:text-brand-red transition-colors">
                                                 {project.title}
                                             </h3>
-                                            <div className="w-16 h-1 bg-gray-200 mb-6 group-hover:bg-safety-yellow transition-colors duration-500"></div>
+                                            <div className="w-16 h-1 bg-gray-200 mb-6 group-hover:bg-brand-red transition-colors duration-500"></div>
                                             <p className="text-gray-600 leading-relaxed mb-6">
                                                 {project.description}
                                             </p>
@@ -144,7 +144,7 @@ export default function Projects() {
                                             <ul className="space-y-2 mb-6">
                                                 {project.details.map((detail, index) => (
                                                     <li key={index} className="flex items-start gap-2 text-sm text-dark-slate font-medium">
-                                                        <ArrowRight className="h-4 w-4 text-safety-yellow shrink-0 mt-0.5" />
+                                                        <ArrowRight className="h-4 w-4 text-brand-red shrink-0 mt-0.5" />
                                                         {detail}
                                                     </li>
                                                 ))}
@@ -173,7 +173,7 @@ export default function Projects() {
                                 </div>
                             </div>
 
-                            <div className="mt-10 bg-safety-yellow p-6 rounded-xl text-center relative overflow-hidden">
+                            <div className="mt-10 bg-brand-red p-6 rounded-xl text-center relative overflow-hidden">
                                 <Building2 className="h-12 w-12 text-black/10 absolute -bottom-2 -right-2" />
                                 <h5 className="font-bold uppercase text-black mb-2 text-sm">Have a Project?</h5>
                                 <p className="text-xs text-black/80 mb-4">Let's discuss how we can support your next heavy lift.</p>

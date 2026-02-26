@@ -50,10 +50,10 @@ export default function BenefitsGrid() {
                     {benefits.map((benefit, index) => (
                         <div
                             key={index}
-                            className="group relative flex flex-col items-start justify-between bg-white p-5 rounded-xl transition-all duration-300 hover:bg-dark-slate border border-gray-100 border-b-4 border-b-industrial-blue hover:border-b-safety-yellow hover:-translate-y-1 shadow-lg hover:shadow-2xl h-auto min-h-[200px]"
+                            className="group relative flex flex-col items-start justify-between bg-white p-5 rounded-xl transition-all duration-300 hover:bg-dark-slate border border-gray-100 border-b-4 border-b-industrial-blue hover:border-b-brand-red hover:-translate-y-1 shadow-lg hover:shadow-2xl h-auto min-h-[200px]"
                         >
                             {/* Icon */}
-                            <div className="text-industrial-blue group-hover:text-safety-yellow transition-colors duration-300 mb-4">
+                            <div className="text-industrial-blue group-hover:text-brand-red transition-colors duration-300 mb-4">
                                 {benefit.icon}
                             </div>
 

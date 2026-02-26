@@ -13,7 +13,7 @@ const StatItem = ({ label, value, suffix = "+" }: { label: string, value: number
 
     return (
         <div ref={ref} className="text-center p-6 border border-white/10 bg-white/5 rounded-lg backdrop-blur-sm">
-            <div className="text-4xl lg:text-5xl font-bold text-safety-yellow font-header mb-2">
+            <div className="text-4xl lg:text-5xl font-bold text-brand-red font-header mb-2">
                 {isInView ? (
                     <motion.span
                         initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ export default function About() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6"
                     >
-                        About <span className="text-safety-yellow">Us</span>
+                        About <span className="text-brand-red">Us</span>
                     </motion.h1>
                     <p className="text-xl text-gray-300 font-medium">
                         Building the future with strength, precision, and over 40 years of expertise.
@@ -64,13 +64,13 @@ export default function About() {
                         className="w-full lg:w-1/2"
                     >
                         <div className="relative">
-                            <div className="absolute -top-4 -left-4 w-24 h-24 bg-safety-yellow/20 rounded-full blur-2xl"></div>
+                            <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-red/20 rounded-full blur-2xl"></div>
                             <h2 className="text-industrial-blue text-xs font-bold uppercase tracking-[0.2em] mb-4">Who We Are</h2>
                             <h3 className="text-3xl md:text-5xl font-bold uppercase font-header text-dark-slate mb-6 leading-tight">
                                 Leading Crane Rental & <br />
                                 <span className="text-industrial-blue">Heavy Lifting Solutions</span>
                             </h3>
-                            <div className="h-1 w-20 bg-safety-yellow mb-8"></div>
+                            <div className="h-1 w-20 bg-brand-red mb-8"></div>
                             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                                 <p>
                                     We are a leading crane rental and heavy lifting solutions provider operating across India, with over 40 years of proven industry experience supporting construction, infrastructure, industrial, and engineering projects.
@@ -94,7 +94,7 @@ export default function About() {
                             <div className="absolute inset-0 bg-industrial-blue/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                             <img src={crawlerImg} alt="SB Cranes Fleet" className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700" />
                             {/* Floating Badge */}
-                            <div className="absolute bottom-6 right-6 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs border-l-4 border-safety-yellow hidden md:block">
+                            <div className="absolute bottom-6 right-6 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs border-l-4 border-brand-red hidden md:block">
                                 <p className="text-industrial-blue font-bold text-lg mb-1">Trusted Partner</p>
                                 <p className="text-gray-500 text-sm">For major EPC & Infrastructure projects across India.</p>
                             </div>
@@ -130,7 +130,7 @@ export default function About() {
                             <Target size={120} />
                         </div>
                         <div className="relative z-10">
-                            <div className="w-16 h-16 bg-safety-yellow rounded-full flex items-center justify-center mb-6">
+                            <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mb-6">
                                 <Target className="h-8 w-8 text-black" />
                             </div>
                             <h3 className="text-2xl font-bold uppercase font-header text-industrial-blue mb-4">Our Vision</h3>
@@ -149,7 +149,7 @@ export default function About() {
                         </div>
                         <div className="relative z-10">
                             <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6">
-                                <TrendingUp className="h-8 w-8 text-safety-yellow" />
+                                <TrendingUp className="h-8 w-8 text-brand-red" />
                             </div>
                             <h3 className="text-2xl font-bold uppercase font-header text-industrial-blue mb-4">Our Mission</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -163,7 +163,7 @@ export default function About() {
                 <div className="mb-24">
                     <div className="text-center mb-16">
                         <h2 className="text-industrial-blue text-xs font-bold uppercase tracking-widest mb-3">Our Culture</h2>
-                        <h3 className="text-3xl md:text-5xl font-bold uppercase font-header text-dark-slate">Core <span className="text-safety-yellow">Values</span></h3>
+                        <h3 className="text-3xl md:text-5xl font-bold uppercase font-header text-dark-slate">Core <span className="text-brand-red">Values</span></h3>
                     </div>
 
                     <div className="space-y-24">
@@ -212,7 +212,7 @@ export default function About() {
                                         />
                                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-20">
                                             <div className="flex items-center gap-3">
-                                                <div className="bg-safety-yellow p-2 rounded-full">
+                                                <div className="bg-brand-red p-2 rounded-full">
                                                     <value.icon className="h-6 w-6 text-black" />
                                                 </div>
                                                 <span className="text-white font-header font-bold uppercase tracking-wider">{value.title}</span>
@@ -225,7 +225,7 @@ export default function About() {
                                 <div className="w-full lg:w-1/2 text-center lg:text-left">
                                     <h4 className="text-3xl md:text-4xl font-bold uppercase font-header text-industrial-blue mb-6 relative inline-block">
                                         {value.title}
-                                        <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-safety-yellow"></span>
+                                        <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-red"></span>
                                     </h4>
                                     <p className="text-lg text-gray-600 leading-relaxed font-medium">
                                         {value.desc}
@@ -242,11 +242,11 @@ export default function About() {
 
                     <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
                         <div className="w-full lg:w-1/2">
-                            <h2 className="text-safety-yellow text-sm font-bold uppercase tracking-widest mb-4">Why SB Cranes?</h2>
+                            <h2 className="text-brand-red text-sm font-bold uppercase tracking-widest mb-4">Why SB Cranes?</h2>
                             <h3 className="text-3xl md:text-4xl font-bold uppercase font-header text-white mb-8">
                                 Built on Trust,<br /> Driven by Performance
                             </h3>
-                            <button className="bg-safety-yellow text-black px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                            <button className="bg-brand-red text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition-colors">
                                 Partner With Us
                             </button>
                         </div>
@@ -261,7 +261,7 @@ export default function About() {
                                     '24x7 Service Support'
                                 ].map((item, index) => (
                                     <div key={index} className="flex items-center gap-3 bg-white/5 p-4 rounded-lg backdrop-blur-sm border border-white/10">
-                                        <CheckCircle2 className="h-5 w-5 text-safety-yellow shrink-0" />
+                                        <CheckCircle2 className="h-5 w-5 text-brand-red shrink-0" />
                                         <span className="text-white font-bold uppercase text-sm tracking-wide">{item}</span>
                                     </div>
                                 ))}

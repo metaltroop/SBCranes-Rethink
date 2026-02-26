@@ -104,7 +104,7 @@ export default function Services() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
                 <div className="relative z-10 text-center px-4">
                     <h1 className="text-4xl md:text-5xl font-bold uppercase font-header text-white mb-2">
-                        Our <span className="text-safety-yellow">Services</span>
+                        Our <span className="text-brand-red">Services</span>
                     </h1>
                 </div>
             </section>
@@ -120,7 +120,7 @@ export default function Services() {
                         <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 w-14 lg:w-72 transition-all duration-300">
                             <div className="bg-industrial-blue p-3 lg:p-4 flex justify-center lg:justify-between items-center">
                                 <h3 className="text-white font-bold uppercase tracking-widest text-sm font-header hidden lg:block">Select Service</h3>
-                                <div className="lg:hidden w-1.5 h-1.5 rounded-full bg-safety-yellow"></div>
+                                <div className="lg:hidden w-1.5 h-1.5 rounded-full bg-brand-red"></div>
                             </div>
 
                             <nav className="flex flex-col">
@@ -129,13 +129,13 @@ export default function Services() {
                                         key={service.id}
                                         onClick={() => setActiveTab(service.id)}
                                         className={`group flex items-center p-3 lg:p-4 transition-all duration-200 border-l-4 relative ${activeTab === service.id
-                                            ? 'bg-blue-50 border-safety-yellow text-industrial-blue font-bold shadow-inner'
+                                            ? 'bg-blue-50 border-brand-red text-industrial-blue font-bold shadow-inner'
                                             : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-industrial-blue'
                                             }`}
                                     >
                                         <div className="flex items-center gap-3 w-full justify-center lg:justify-start">
                                             {/* Icon */}
-                                            <service.icon className={`h-6 w-6 lg:h-5 lg:w-5 flex-shrink-0 ${activeTab === service.id ? 'text-safety-yellow' : 'text-gray-400'}`} />
+                                            <service.icon className={`h-6 w-6 lg:h-5 lg:w-5 flex-shrink-0 ${activeTab === service.id ? 'text-brand-red' : 'text-gray-400'}`} />
 
                                             {/* Text Label - Hidden on Mobile */}
                                             <span className="uppercase tracking-tight text-sm hidden lg:block">{service.shortTitle}</span>
@@ -143,7 +143,7 @@ export default function Services() {
 
                                         {/* Desktop Active Indicator */}
                                         {activeTab === service.id && (
-                                            <ChevronRight className="h-4 w-4 text-safety-yellow hidden lg:block absolute right-3" />
+                                            <ChevronRight className="h-4 w-4 text-brand-red hidden lg:block absolute right-3" />
                                         )}
                                     </button>
                                 ))}
@@ -168,7 +168,7 @@ export default function Services() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                                     <div className="absolute bottom-6 left-6 md:left-10">
                                         <div className="flex items-center gap-3 mb-2">
-                                            <div className="bg-safety-yellow p-2 rounded-lg">
+                                            <div className="bg-brand-red p-2 rounded-lg">
                                                 <activeService.icon className="h-6 w-6 text-black" />
                                             </div>
                                             <h2 className="text-xl md:text-4xl font-bold uppercase text-white font-header">
@@ -179,14 +179,14 @@ export default function Services() {
                                 </div>
 
                                 <div className="p-4 md:p-10">
-                                    <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed border-l-4 border-safety-yellow pl-6">
+                                    <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed border-l-4 border-brand-red pl-6">
                                         {activeService.overview}
                                     </p>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-10">
                                         <div>
                                             <h4 className="flex items-center gap-2 text-sm font-bold uppercase text-industrial-blue tracking-widest mb-6 border-b border-gray-200 pb-2">
-                                                <span className="w-2 h-2 rounded-full bg-safety-yellow"></span>
+                                                <span className="w-2 h-2 rounded-full bg-brand-red"></span>
                                                 Applications
                                             </h4>
                                             <ul className="space-y-3">
@@ -200,7 +200,7 @@ export default function Services() {
                                         </div>
                                         <div>
                                             <h4 className="flex items-center gap-2 text-sm font-bold uppercase text-industrial-blue tracking-widest mb-6 border-b border-gray-200 pb-2">
-                                                <span className="w-2 h-2 rounded-full bg-safety-yellow"></span>
+                                                <span className="w-2 h-2 rounded-full bg-brand-red"></span>
                                                 Capabilities
                                             </h4>
                                             <ul className="space-y-3">
@@ -247,7 +247,7 @@ export default function Services() {
                     <p className="text-white mb-6 text-lg">
                         See how we apply these capabilities in the real world.
                     </p>
-                    <a href="/projects" className="inline-block bg-transparent border-2 border-safety-yellow text-safety-yellow px-8 py-3 font-bold uppercase tracking-widest hover:bg-safety-yellow hover:text-black transition-all duration-300">
+                    <a href="/projects" className="inline-block bg-transparent border-2 border-brand-red text-brand-red px-8 py-3 font-bold uppercase tracking-widest hover:bg-brand-red hover:text-white transition-all duration-300">
                         View Our Projects
                     </a>
                 </div>

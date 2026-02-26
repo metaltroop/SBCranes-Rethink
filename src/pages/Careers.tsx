@@ -47,7 +47,7 @@ export default function Careers() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6 tracking-tight">
-                            Build Your <span className="text-safety-yellow">Legacy</span>
+                            Build Your <span className="text-brand-red">Legacy</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto">
                             Join the team that's lifting the future of India's infrastructure.
@@ -65,7 +65,7 @@ export default function Careers() {
                         {/* Why Work With Us */}
                         <div>
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="h-1 w-12 bg-safety-yellow"></div>
+                                <div className="h-1 w-12 bg-brand-red"></div>
                                 <h2 className="text-industrial-blue text-sm font-bold uppercase tracking-widest">Why SB Cranes?</h2>
                             </div>
                             <h3 className="text-3xl md:text-4xl font-bold uppercase font-header text-dark-slate mb-8 leading-tight">
@@ -90,7 +90,7 @@ export default function Careers() {
                                     'Skill Certification'
                                 ].map((item, index) => (
                                     <div key={index} className="flex items-center gap-3">
-                                        <CheckCircle2 className="h-5 w-5 text-safety-yellow shrink-0" />
+                                        <CheckCircle2 className="h-5 w-5 text-brand-red shrink-0" />
                                         <span className="text-dark-slate font-bold uppercase text-sm tracking-wide">{item}</span>
                                     </div>
                                 ))}
@@ -100,7 +100,7 @@ export default function Careers() {
                         {/* Current Openings */}
                         <div id="openings">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="h-1 w-12 bg-safety-yellow"></div>
+                                <div className="h-1 w-12 bg-brand-red"></div>
                                 <h2 className="text-industrial-blue text-sm font-bold uppercase tracking-widest">Current Opportunities</h2>
                             </div>
                             <h3 className="text-3xl font-bold uppercase font-header text-dark-slate mb-8">
@@ -115,7 +115,7 @@ export default function Careers() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="group bg-gray-50 border border-gray-100 p-6 hover:border-safety-yellow transition-all duration-300 rounded-lg hover:shadow-md"
+                                        className="group bg-gray-50 border border-gray-100 p-6 hover:border-brand-red transition-all duration-300 rounded-lg hover:shadow-md"
                                     >
                                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                             <div>
@@ -128,7 +128,7 @@ export default function Careers() {
                                                 <p className="text-gray-600 text-sm">{job.description}</p>
                                             </div>
                                             <div className="md:self-center">
-                                                <a href="#apply" className="inline-flex items-center gap-2 text-sm font-bold uppercase text-industrial-blue hover:text-safety-yellow transition-colors">
+                                                <a href="#apply" className="inline-flex items-center gap-2 text-sm font-bold uppercase text-industrial-blue hover:text-brand-red transition-colors">
                                                     Apply Now <ArrowRight className="h-4 w-4" />
                                                 </a>
                                             </div>
@@ -144,7 +144,7 @@ export default function Careers() {
                     <div className="w-full lg:w-2/5">
                         <div id="apply" className="bg-dark-slate text-white rounded-xl shadow-2xl p-8 lg:p-10 sticky top-28">
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="bg-safety-yellow p-3 rounded-full">
+                                <div className="bg-brand-red p-3 rounded-full">
                                     <Briefcase className="h-6 w-6 text-black" />
                                 </div>
                                 <div>
@@ -157,27 +157,27 @@ export default function Careers() {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-xs font-bold uppercase text-gray-400 mb-2">First Name</label>
-                                        <input type="text" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-safety-yellow transition-colors rounded" placeholder="John" />
+                                        <input type="text" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-brand-red transition-colors rounded" placeholder="John" />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-bold uppercase text-gray-400 mb-2">Last Name</label>
-                                        <input type="text" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-safety-yellow transition-colors rounded" placeholder="Doe" />
+                                        <input type="text" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-brand-red transition-colors rounded" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-400 mb-2">Email Address</label>
-                                    <input type="email" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-safety-yellow transition-colors rounded" placeholder="john@example.com" />
+                                    <input type="email" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-brand-red transition-colors rounded" placeholder="john@example.com" />
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-400 mb-2">Phone Number</label>
-                                    <input type="tel" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-safety-yellow transition-colors rounded" placeholder="+91 98765 43210" />
+                                    <input type="tel" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-brand-red transition-colors rounded" placeholder="+91 98765 43210" />
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-400 mb-2">Position</label>
-                                    <select className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-safety-yellow transition-colors rounded [&>option]:text-black">
+                                    <select className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-brand-red transition-colors rounded [&>option]:text-black">
                                         <option>Select a Position...</option>
                                         {openings.map((o, i) => <option key={i} value={o.title}>{o.title}</option>)}
                                         <option value="Other">Other / General Application</option>
@@ -186,14 +186,14 @@ export default function Careers() {
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-400 mb-2">Years of Experience</label>
-                                    <input type="number" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-safety-yellow transition-colors rounded" placeholder="e.g. 5" />
+                                    <input type="number" className="w-full bg-white/10 border border-white/10 text-white p-3 focus:outline-none focus:border-brand-red transition-colors rounded" placeholder="e.g. 5" />
                                 </div>
 
                                 <motion.button
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="button"
-                                    className="w-full bg-safety-yellow text-black font-bold uppercase tracking-widest py-4 hover:bg-white transition-colors flex items-center justify-center gap-2 mt-2 rounded"
+                                    className="w-full bg-brand-red text-white font-bold uppercase tracking-widest py-4 hover:bg-white transition-colors flex items-center justify-center gap-2 mt-2 rounded"
                                 >
                                     Submit Application <Send className="h-4 w-4" />
                                 </motion.button>

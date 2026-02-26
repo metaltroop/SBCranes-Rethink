@@ -21,7 +21,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen w-full overflow-x-clip bg-steel-grey font-sans text-dark-slate antialiased selection:bg-safety-yellow selection:text-black">
+      <div className="min-h-screen w-full overflow-x-clip bg-steel-grey font-sans text-dark-slate antialiased selection:bg-brand-red selection:text-white">
         <Navbar onOpenModal={() => setIsModalOpen(true)} />
         <Routes>
           <Route path="/" element={<Home onOpenModal={() => setIsModalOpen(true)} />} />

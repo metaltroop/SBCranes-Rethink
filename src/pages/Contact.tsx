@@ -15,7 +15,7 @@ export default function Contact() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6"
                     >
-                        Contact <span className="text-safety-yellow">Us</span>
+                        Contact <span className="text-brand-red">Us</span>
                     </motion.h1>
                     <p className="text-xl text-gray-300 font-medium">
                         Get in touch with our team for lifting solutions and support.
@@ -37,7 +37,7 @@ export default function Contact() {
                             <div className="space-y-8">
                                 <div className="flex items-start gap-6">
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 shrink-0">
-                                        <MapPin className="h-6 w-6 text-safety-yellow" />
+                                        <MapPin className="h-6 w-6 text-brand-red" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold uppercase text-dark-slate mb-2">Headquarters</h4>
@@ -49,7 +49,7 @@ export default function Contact() {
 
                                 <div className="flex items-start gap-6">
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 shrink-0">
-                                        <Mail className="h-6 w-6 text-safety-yellow" />
+                                        <Mail className="h-6 w-6 text-brand-red" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold uppercase text-dark-slate mb-2">Email Us</h4>
@@ -60,7 +60,7 @@ export default function Contact() {
 
                                 <div className="flex items-start gap-6">
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 shrink-0">
-                                        <Phone className="h-6 w-6 text-safety-yellow" />
+                                        <Phone className="h-6 w-6 text-brand-red" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold uppercase text-dark-slate mb-2">Call Us</h4>
@@ -86,7 +86,7 @@ export default function Contact() {
                             ></iframe>
                             <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-md shadow-sm border border-gray-200 pointer-events-none">
                                 <span className="text-[10px] font-bold uppercase tracking-widest text-industrial-blue flex items-center gap-1">
-                                    <MapPin className="h-3 w-3 text-safety-yellow" /> Locate Us
+                                    <MapPin className="h-3 w-3 text-brand-red" /> Locate Us
                                 </span>
                             </div>
                         </div>
@@ -101,22 +101,22 @@ export default function Contact() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-xs font-bold uppercase text-gray-500 mb-2">First Name</label>
-                                        <input type="text" className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-safety-yellow transition-colors" placeholder="John" />
+                                        <input type="text" className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-brand-red transition-colors" placeholder="John" />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-bold uppercase text-gray-500 mb-2">Last Name</label>
-                                        <input type="text" className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-safety-yellow transition-colors" placeholder="Doe" />
+                                        <input type="text" className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-brand-red transition-colors" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-500 mb-2">Email Address</label>
-                                    <input type="email" className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-safety-yellow transition-colors" placeholder="john@example.com" />
+                                    <input type="email" className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-brand-red transition-colors" placeholder="john@example.com" />
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-500 mb-2">Subject</label>
-                                    <select className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-safety-yellow transition-colors">
+                                    <select className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-brand-red transition-colors">
                                         <option>General Enquiry</option>
                                         <option>Crane Rental Quote</option>
                                         <option>Project Partnership</option>
@@ -126,7 +126,7 @@ export default function Contact() {
 
                                 <div>
                                     <label className="block text-xs font-bold uppercase text-gray-500 mb-2">Message</label>
-                                    <textarea rows={4} className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-safety-yellow transition-colors" placeholder="How can we help you?"></textarea>
+                                    <textarea rows={4} className="w-full bg-gray-50 border-b-2 border-gray-200 p-3 focus:outline-none focus:border-brand-red transition-colors" placeholder="How can we help you?"></textarea>
                                 </div>
 
                                 <button type="button" className="w-full bg-industrial-blue text-white font-bold uppercase tracking-widest py-4 hover:bg-black transition-colors flex items-center justify-center gap-2 mt-4">

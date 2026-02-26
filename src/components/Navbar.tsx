@@ -41,10 +41,10 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link to="/" className="flex items-center gap-2 group">
-                            <div className="h-8 w-8 bg-safety-yellow flex items-center justify-center font-bold text-black text-lg font-header">
+                            <div className="h-8 w-8 bg-brand-red flex items-center justify-center font-bold text-white text-lg font-header">
                                 <img src={logo} alt="" />
                             </div>
-                            <span className="text-xl font-bold uppercase tracking-tighter text-white font-header group-hover:text-safety-yellow transition-colors">
+                            <span className="text-xl font-bold uppercase tracking-tighter text-white font-header group-hover:text-brand-red transition-colors">
                                 Cranes
                             </span>
                         </Link>
@@ -55,14 +55,14 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                                 <Link
                                     key={link.name}
                                     to={link.href}
-                                    className="text-xs font-bold uppercase tracking-widest text-white/90 hover:text-safety-yellow transition-colors"
+                                    className="text-xs font-bold uppercase tracking-widest text-white/90 hover:text-brand-red transition-colors"
                                 >
                                     {link.name}
                                 </Link>
                             ))}
                             <button
                                 onClick={onOpenModal}
-                                className="flex items-center gap-2 bg-safety-yellow px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-black hover:bg-white transition-colors"
+                                className="flex items-center gap-2 bg-brand-red px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-white hover:bg-white transition-colors"
                             >
                                 <Phone className="h-3.5 w-3.5" />
                                 Plan Your Lift
@@ -72,7 +72,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                         {/* Mobile Toggle */}
                         <button
                             onClick={() => setIsOpen(true)}
-                            className="xl:hidden text-white hover:text-safety-yellow transition-colors"
+                            className="xl:hidden text-white hover:text-brand-red transition-colors"
                         >
                             <Menu className="h-8 w-8" />
                         </button>
@@ -94,7 +94,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                             <div className="flex items-center justify-end mb-8">
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="text-white hover:text-safety-yellow transition-colors"
+                                    className="text-white hover:text-brand-red transition-colors"
                                 >
                                     <X className="h-10 w-10" />
                                 </button>
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                                         key={link.name}
                                         to={link.href}
                                         onClick={() => setIsOpen(false)}
-                                        className="text-3xl font-bold uppercase tracking-tighter text-white hover:text-safety-yellow transition-colors font-header border-b border-white/10 pb-4"
+                                        className="text-3xl font-bold uppercase tracking-tighter text-white hover:text-brand-red transition-colors font-header border-b border-white/10 pb-4"
                                     >
                                         {link.name}
                                     </Link>
@@ -116,7 +116,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                                         setIsOpen(false);
                                         onOpenModal();
                                     }}
-                                    className="mt-4 flex w-full items-center justify-center gap-2 bg-safety-yellow px-6 py-4 text-lg font-bold uppercase tracking-widest text-black hover:bg-white transition-colors"
+                                    className="mt-4 flex w-full items-center justify-center gap-2 bg-brand-red px-6 py-4 text-lg font-bold uppercase tracking-widest text-white hover:bg-white transition-colors"
                                 >
                                     <Phone className="h-5 w-5" />
                                     Plan Your Lift

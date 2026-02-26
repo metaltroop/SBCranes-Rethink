@@ -14,7 +14,7 @@ export default function PlaceholderPage() {
             </p>
             <Link
                 to="/"
-                className="flex items-center gap-2 rounded-none bg-safety-yellow px-8 py-3 text-sm font-bold uppercase tracking-widest text-black hover:bg-yellow-400 transition-colors"
+                className="flex items-center gap-2 rounded-none bg-brand-red px-8 py-3 text-sm font-bold uppercase tracking-widest text-white hover:bg-red-500 transition-colors"
             >
                 <ArrowLeft className="h-4 w-4" />
                 Back to Home
