@@ -16,7 +16,7 @@ export default function Footer() {
                     <div>
                         <h2 className="text-4xl font-bold uppercase tracking-tighter text-white font-header mb-6">SB Cranes</h2>
                         <p className="mb-8 text-gray-400 leading-relaxed max-w-xs text-sm">
-                            To become a globally recognized crane rental company by providing safe, efficient, and innovative heavy lifting solutions.
+                            Lifting with Precision
                         </p>
                         <div className="flex gap-4">
                             {/* Socials Placeholders */}
@@ -44,7 +44,7 @@ export default function Footer() {
                         <ul className="space-y-6 text-sm text-gray-300">
                             <li className="flex gap-4">
                                 <MapPin className="h-6 w-6 text-brand-red shrink-0" />
-                                <span>Okhla Industrial Area,<br />Phase-1, New Delhi</span>
+                                <span>SHED NO-IO DSIDC,Okhla Industrial Area,<br />Phase-1, New Delhi - 110020</span>
                             </li>
                             <li className="flex gap-4">
                                 <Phone className="h-6 w-6 text-brand-red shrink-0" />

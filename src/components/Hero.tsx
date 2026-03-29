@@ -79,8 +79,8 @@ export default function Hero() {
                             className="max-w-4xl text-3xl sm:text-5xl font-bold uppercase leading-none tracking-tighter text-white md:text-6xl drop-shadow-2xl font-header break-words"
                         >
                             Safe. Reliable. <br />
-                            On-Time Lifting & <br />
-                            <span className="text-brand-red">Heavy Transport </span> Solutions.
+                            On-Time<span className="text-brand-red"> Lifting </span>& <br />
+                            Heavy Transport Solutions.
                         </motion.h1>
                     </div>
                     <motion.div

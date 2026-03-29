@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Calendar, Briefcase, ArrowRight, Building2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import heroBg from '../assets/images/hero_bg.png';
 import crawlerImg from '../assets/images/crawler_crane.png';
 
@@ -21,61 +21,65 @@ import powergrid from '../assets/keyLeaders/powergrid.png';
 const projects = [
     {
         id: 1,
-        title: "HMEL Refinery (HPCL-Mittal Energy Limited)",
-        category: "Refinery & Maintenance",
-        location: "Bathinda, Punjab",
-        year: "2019-2022",
-        description: "SB Cranes provided long-term mobile crane support at HMEL Refinery for routine maintenance, shutdown activities, and equipment handling across multiple process units. The engagement spanned nearly three years, supporting critical refinery operations requiring precision lifting and strict safety compliance.",
-        details: [
-            "Frequent mobilization of cranes for handling mechanical components and piping systems.",
-            "Executed under stringent safety and permit-to-work procedures.",
-            "Zero safety incidents utilizing well-maintained cranes and trained operators."
+        title: "Installation of National Flag at Wagah Border",
+        overview: "SB Cranes was entrusted with the prestigious responsibility of supporting the installation of the National Flag structure at the Wagah Border. The project involved precision lifting and careful handling of structural components at a site of high national importance, requiring strict adherence to safety, coordination, and execution standards.",
+        subheading: "",
+        bodyParagraphs: [
+            "The installation of the National Flag at the Wagah Border was carried out with utmost care, precision, and respect for the significance of the site.",
+            "The operation required seamless coordination with authorities, adherence to strict protocols, and disciplined execution under close supervision. SB Cranes ensured that the lifting activity was conducted in a controlled and composed manner, maintaining the dignity of the location while achieving accurate placement of the structure.",
+            "The successful completion of the task marked a moment of pride for the entire team, contributing to a landmark installation that symbolizes national unity and honor."
         ],
+        outcomes: [],
+        highlight: "A Moment of Pride\nSB Cranes is honored to have contributed to a project of national pride, supporting the installation of the Indian National Flag at the Wagah Border.",
         image: heroBg,
-        partnerLogo: hmel
+        partnerLogo: null
     },
     {
         id: 2,
-        title: "JLN Stadium Redevelopment",
-        category: "Infrastructure & Sports",
-        location: "New Delhi",
-        year: "2010",
-        description: "Played a key role in the redevelopment and structural upgradation of Jawaharlal Nehru (JLN) Stadium for the Commonwealth Games. The project involved heavy structural lifting, precision placement, and coordinated execution within a live construction environment.",
-        details: [
-            "Heavy lifting support for large structural components.",
-            "Addressed challenges of restricted site access and tight working spaces.",
-            "Deployed high-capacity crawler cranes for smooth installation."
+        title: "JLN STADIUM REDEVELOPMENT",
+        overview: "SB Cranes played a key role in the redevelopment and structural upgradation of Jawaharlal Nehru (JLN) Stadium, one of India’s premier sports infrastructure facilities, in 2010. The project involved heavy structural lifting, precision placement, and coordinated execution within a live construction environment.\n\nThe scope was executed in collaboration with P&R (Patel & Raval Engineering / P&R Infra – leading structural and heavy engineering contractor) as part of the stadium modernization works.",
+        subheading: "JLN Stadium Redevelopment – Heavy Lifting Support",
+        bodyParagraphs: [
+            "SB Cranes was engaged for heavy lifting and crane support during the redevelopment works at JLN Stadium, involving the handling and placement of large structural components.",
+            "The project presented challenges such as restricted site access, tight working spaces, and the need for precision lifting within an active construction environment.",
+            "To address this, high-capacity crawler cranes were deployed along with detailed lift planning and close coordination with the project team. The operation was executed safely and efficiently, ensuring smooth installation, zero downtime, and timely completion of the assigned scope."
         ],
+        outcomes: [],
+        highlight: "",
         image: crawlerImg,
-        partnerLogo: null // P&R Logo not available, will use generic layout
+        partnerLogo: null
     },
     {
         id: 3,
-        title: "Installation of National Flag at Wagah Border",
-        category: "Iconic / Government",
-        location: "Wagah Border, Punjab",
-        year: "2017",
-        description: "Entrusted with the prestigious responsibility of supporting the installation of the National Flag structure at the Wagah Border. The project involved precision lifting and careful handling of structural components at a site of high national importance.",
-        details: [
-            "Seamless coordination with authorities and strict adherence to protocols.",
-            "Controlled and composed lifting maintaining the dignity of the location.",
-            "Successfully achieved accurate placement of the structure."
+        title: "Tower Crane Erection for High-Rise Construction",
+        overview: "SB Cranes was engaged for the erection of a tower crane for a major high-rise construction project in Gurgaon. The project involved the installation of a T-type tower crane at a congested urban site, requiring precise planning, controlled lifting, and coordination with the construction team to ensure safe and timely execution.",
+        subheading: "",
+        bodyParagraphs: [],
+        outcomes: [
+            "Successful erection of tower crane in a restricted urban environment",
+            "Safe and precise lifting using luffing crane configuration",
+            "No disruption to surrounding construction activities",
+            "Timely completion in line with project schedule",
+            "High level of safety and execution control maintained throughout"
         ],
-        image: heroBg
+        highlight: "",
+        image: heroBg,
+        partnerLogo: null
     },
     {
         id: 4,
-        title: "Tower Crane Erection for High-Rise",
-        category: "Urban Construction",
-        location: "Gurgaon, Haryana",
-        year: "2023",
-        description: "Engaged for the erection of a tower crane for a major high-rise construction project in a congested urban site. The project involved the installation of a T-type tower crane, requiring precise planning and coordination with the construction team.",
-        details: [
-            "Successful erection in a restricted urban environment.",
-            "Used luffing crane configuration for safe and precise lifting.",
-            "No disruption to surrounding construction activities."
+        title: "HMEL REFINERY (HPCL–MITTAL ENERGY LIMITED)",
+        overview: "SB Cranes provided long-term mobile crane support at HMEL Refinery for routine maintenance, shutdown activities, and equipment handling across multiple process units. The engagement spanned nearly three years, supporting critical refinery operations requiring precision lifting and strict safety compliance.",
+        subheading: "Ongoing Maintenance & Lifting Operations",
+        bodyParagraphs: [
+            "SB Cranes was engaged for long-term mobile crane support at HMEL Refinery, providing lifting services for routine maintenance, shutdown activities, and equipment handling across multiple operational units.",
+            "The scope involved frequent mobilization of cranes for handling mechanical components, piping systems, and plant equipment within live refinery conditions. All operations were executed under stringent safety and permit-to-work procedures, requiring precise coordination with refinery operations and maintenance teams.",
+            "Through detailed lift planning, disciplined execution, and deployment of well-maintained cranes with trained operators, SB Cranes ensured smooth workflow, zero safety incidents, and uninterrupted refinery operations throughout the project duration."
         ],
-        image: crawlerImg
+        outcomes: [],
+        highlight: "",
+        image: crawlerImg,
+        partnerLogo: hmel
     }
 ];
 
@@ -83,109 +87,194 @@ const clientLogos = [ntpc, ongc, reliance, lnt, tata, adani, ultratech, gail, po
 
 export default function Projects() {
     return (
-        <div className="min-h-screen bg-white">
-            {/* Hero Section */}
-            <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-dark-slate">
-                <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: `url(${heroBg})` }}></div>
-                <div className="absolute inset-0 bg-linear-to-t from-dark-slate to-transparent"></div>
-                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="min-h-screen bg-[#fafafa]">
+            {/* Minimalist Hero Section */}
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-dark-slate">
+                <motion.div 
+                    initial={{ scale: 1.1, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 0.3 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute inset-0 bg-cover bg-center" 
+                    style={{ backgroundImage: `url(${heroBg})`, filter: 'grayscale(30%)' }}
+                />
+                <div className="absolute inset-0 bg-linear-to-b from-dark-slate/80 via-dark-slate/50 to-[#fafafa]"></div>
+                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8 }}
+                        className="inline-flex items-center gap-3 mb-6 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20"
+                    >
+                        <div className="h-2 w-2 rounded-full bg-brand-red animate-pulse"></div>
+                        <span className="text-white text-xs font-bold uppercase tracking-widest">Case Studies Archive</span>
+                    </motion.div>
+                    
                     <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="text-5xl md:text-7xl lg:text-8xl font-black uppercase font-header text-white mb-6 leading-[0.9] tracking-tighter"
+                    >
+                        Our <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-red to-[#ff6b6b]">Legacy</span>
+                    </motion.h1>
+                    
+                    <motion.p 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-bold uppercase font-header text-white mb-6"
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto"
                     >
-                        Our <span className="text-brand-red">Projects</span>
-                    </motion.h1>
-                    <p className="text-xl text-gray-300 font-medium">
-                        Delivering excellence in complex lifting operations across India.
-                    </p>
+                        Engineering excellence in complex lifting operations across India's most demanding sectors.
+                    </motion.p>
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 py-16 lg:py-24">
-                <div className="flex flex-col lg:flex-row gap-16 items-start">
-
-                    {/* Main Content: Featured Projects */}
-                    <div className="w-full lg:w-3/4">
-                        <div className="mb-12">
-                            <h2 className="text-industrial-blue text-xs font-bold uppercase tracking-widest mb-4">Portfolio</h2>
-                            <h3 className="text-3xl md:text-4xl font-bold uppercase font-header text-dark-slate">
-                                Major <span className="text-brand-red">Milestones</span>
-                            </h3>
-                        </div>
-
-                        <div className="space-y-20">
-                            {projects.map((project) => (
-                                <div key={project.id} className="group border-b border-gray-100 pb-20 last:border-0 last:pb-0">
-                                    <div className="flex flex-col md:flex-row gap-8 mb-8">
-                                        <div className="w-full md:w-1/3 relative overflow-hidden rounded-xl shadow-lg">
-                                            <div className="absolute inset-0 bg-industrial-blue/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                                            <img src={project.image} alt={project.title} className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                                            {project.partnerLogo && (
-                                                <div className="absolute bottom-4 right-4 bg-white p-2 rounded shadow-md z-20">
-                                                    <img src={project.partnerLogo} alt="Partner Logo" className="h-8 object-contain" />
+            <div className="py-24 lg:py-32">
+                <div className="space-y-40 md:space-y-64">
+                    {projects.map((project, index) => {
+                        const isEven = index % 2 === 0;
+                        return (
+                            <div key={project.id} className="container mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-start`}>
+                                    
+                                    {/* Image Column - Sticky */}
+                                    <div className="w-full lg:w-5/12 lg:sticky lg:top-32 z-10">
+                                        <motion.div 
+                                            initial={{ opacity: 0, scale: 0.95 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true, margin: "-100px" }}
+                                            transition={{ duration: 0.8 }}
+                                            className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] group"
+                                        >
+                                            <div className="absolute inset-0 bg-gradient-to-t from-dark-slate/90 via-dark-slate/20 to-transparent z-10" />
+                                            <img src={project.image} alt={project.title} className="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out" />
+                                            
+                                            <div className="absolute top-6 right-6 z-20">
+                                                <div className="bg-white text-dark-slate text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                                                    0{index + 1}
                                                 </div>
-                                            )}
-                                        </div>
-                                        <div className="w-full md:w-2/3">
-                                            <div className="flex flex-wrap gap-4 mb-4 text-xs font-bold uppercase tracking-widest text-gray-500">
-                                                <span className="flex items-center gap-1"><Briefcase className="h-3 w-3 text-brand-red" /> {project.category}</span>
-                                                <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-brand-red" /> {project.location}</span>
-                                                <span className="flex items-center gap-1"><Calendar className="h-3 w-3 text-brand-red" /> {project.year}</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold uppercase font-header text-industrial-blue mb-4 group-hover:text-brand-red transition-colors">
-                                                {project.title}
-                                            </h3>
-                                            <div className="w-16 h-1 bg-gray-200 mb-6 group-hover:bg-brand-red transition-colors duration-500"></div>
-                                            <p className="text-gray-600 leading-relaxed mb-6">
-                                                {project.description}
+
+                                            <div className="absolute bottom-8 left-8 right-8 z-20">
+                                                 {project.partnerLogo && (
+                                                     <div className="mb-6 inline-block bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white/50">
+                                                         <img src={project.partnerLogo} alt="Partner Logo" className="h-8 object-contain" />
+                                                     </div>
+                                                 )}
+                                                 <h3 className="text-white text-3xl md:text-4xl font-black font-header uppercase leading-[1.1] tracking-tight">
+                                                     {project.title}
+                                                 </h3>
+                                            </div>
+                                        </motion.div>
+                                    </div>
+
+                                    {/* Text Column - Scrolling */}
+                                    <div className="w-full lg:w-7/12 py-4 lg:py-12 flex flex-col gap-12 lg:gap-16">
+                                        
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 30 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true, margin: "-100px" }}
+                                            transition={{ duration: 0.6 }}
+                                        >
+                                            <div className="flex items-center gap-4 mb-8">
+                                                <div className="h-px w-16 bg-brand-red"></div>
+                                                <span className="text-brand-red text-xs font-black uppercase tracking-[0.2em]">Project Overview</span>
+                                            </div>
+                                            <p className="text-2xl md:text-3xl lg:text-4xl text-dark-slate font-light leading-snug tracking-tight">
+                                                {project.overview}
                                             </p>
+                                        </motion.div>
 
-                                            <ul className="space-y-2 mb-6">
-                                                {project.details.map((detail, index) => (
-                                                    <li key={index} className="flex items-start gap-2 text-sm text-dark-slate font-medium">
-                                                        <ArrowRight className="h-4 w-4 text-brand-red shrink-0 mt-0.5" />
-                                                        {detail}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                        {project.highlight && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 30 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-100px" }}
+                                                transition={{ duration: 0.6, delay: 0.1 }}
+                                                className="bg-white p-8 md:p-10 rounded-[2rem] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500"
+                                            >
+                                                <div className="absolute -right-20 -top-20 w-64 h-64 bg-linear-to-br from-[#f09a59]/20 to-transparent rounded-full blur-3xl group-hover:bg-[#f09a59]/30 transition-colors duration-500"></div>
+                                                <div className="relative z-10">
+                                                    <h4 className="text-xl md:text-2xl font-bold text-dark-slate mb-4 font-header uppercase tracking-wide">{project.highlight.split('\n')[0]}</h4>
+                                                    <p className="text-gray-600 text-lg leading-relaxed">{project.highlight.split('\n')[1]}</p>
+                                                </div>
+                                            </motion.div>
+                                        )}
+
+                                        {(project.subheading || (project.bodyParagraphs && project.bodyParagraphs.length > 0)) && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 30 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-100px" }}
+                                                transition={{ duration: 0.6 }}
+                                                className="space-y-8"
+                                            >
+                                                {project.subheading && (
+                                                    <h4 className="text-xl font-bold text-industrial-blue uppercase tracking-wider font-header border-l-4 border-industrial-blue pl-4">
+                                                        {project.subheading}
+                                                    </h4>
+                                                )}
+
+                                                {project.bodyParagraphs && project.bodyParagraphs.length > 0 && (
+                                                    <div className="space-y-6 text-gray-500 text-lg leading-relaxed font-light">
+                                                        {project.bodyParagraphs.map((p, i) => (
+                                                            <p key={i}>{p}</p>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </motion.div>
+                                        )}
+
+                                        {project.outcomes && project.outcomes.length > 0 && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 30 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-100px" }}
+                                                transition={{ duration: 0.6 }}
+                                                className="pt-8 border-t border-gray-200"
+                                            >
+                                                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-8">Key Outcomes</h4>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                                                    {project.outcomes.map((outcome, i) => (
+                                                        <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-xs hover:shadow-md transition-shadow duration-300">
+                                                            <CheckCircle2 className="h-6 w-6 text-brand-red shrink-0" />
+                                                            <span className="text-gray-700 font-medium leading-snug">{outcome}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </motion.div>
+                                        )}
+
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Sidebar: Client Logos */}
-                    <aside className="w-full lg:w-1/4 sticky top-28">
-                        <div className="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm">
-                            <h4 className="text-lg font-bold uppercase font-header text-dark-slate mb-6 border-b border-gray-200 pb-4">
-                                Trusted By
-                            </h4>
-                            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6">
-                                {clientLogos.map((logo, idx) => (
-                                    <div key={idx} className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md transition-shadow grayscale hover:grayscale-0 duration-300">
-                                        <img src={logo} alt={`Client ${idx}`} className="max-h-12 w-auto object-contain" />
-                                    </div>
-                                ))}
-                                <div className="bg-industrial-blue p-4 rounded-lg shadow-sm flex items-center justify-center text-white text-center">
-                                    <span className="text-xs font-bold uppercase tracking-widest">And Many More...</span>
-                                </div>
                             </div>
-
-                            <div className="mt-10 bg-brand-red p-6 rounded-xl text-center relative overflow-hidden">
-                                <Building2 className="h-12 w-12 text-black/10 absolute -bottom-2 -right-2" />
-                                <h5 className="font-bold uppercase text-black mb-2 text-sm">Have a Project?</h5>
-                                <p className="text-xs text-black/80 mb-4">Let's discuss how we can support your next heavy lift.</p>
-                                <button className="w-full bg-black text-white text-xs font-bold uppercase tracking-widest py-3 hover:bg-white hover:text-black transition-colors" onClick={() => document.getElementById('contact')?.scrollIntoView()}>
-                                    Contact Us
-                                </button>
-                            </div>
-                        </div>
-                    </aside>
-
+                        );
+                    })}
                 </div>
             </div>
+            
+            {/* Minimalist Trusted By Section */}
+            <div className="bg-white py-24 border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <span className="text-brand-red text-xs font-black uppercase tracking-[0.2em] mb-4 block">Our Network</span>
+                        <h3 className="text-4xl md:text-5xl font-black uppercase font-header text-dark-slate tracking-tight">Trusted By <span className="text-transparent bg-clip-text bg-linear-to-r from-industrial-blue to-blue-400">Leaders</span></h3>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-10 md:gap-20 items-center max-w-6xl mx-auto opacity-60">
+                        {clientLogos.map((logo, idx) => (
+                            <motion.img 
+                                key={idx} 
+                                src={logo} 
+                                alt={`Client ${idx}`} 
+                                whileHover={{ scale: 1.1, opacity: 1, filter: "grayscale(0%)" }}
+                                className="h-10 md:h-14 object-contain grayscale transition-all duration-300 cursor-pointer" 
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
+            
         </div>
     );
 }

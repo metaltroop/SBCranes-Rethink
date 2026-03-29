@@ -41,7 +41,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link to="/" className="flex items-center gap-2 group">
-                            <div className="h-8 w-8 bg-brand-red flex items-center justify-center font-bold text-white text-lg font-header">
+                            <div className="h-8 w-8 bg-white flex items-center justify-center font-bold text-white text-lg font-header">
                                 <img src={logo} alt="" />
                             </div>
                             <span className="text-xl font-bold uppercase tracking-tighter text-white font-header group-hover:text-brand-red transition-colors">

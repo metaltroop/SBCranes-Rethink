@@ -9,7 +9,7 @@ const fleetCategories = [
     {
         title: "Mobile Cranes",
         description: "Versatile and rapid deployment cranes for all-terrain operations.",
-        specs: ["Capacity: 20MT - 250MT", "Boom Length: Up to 80m", "All-Terrain & Rough Terrain"],
+        specs: ["Capacity: 20T - 700T", "Boom Length: Up to 80m", "All-Terrain & Rough Terrain"],
         image: heroBg,
         id: "mobile"
     },
@@ -112,7 +112,7 @@ export default function Fleet() {
                                         href={`/specs?cat=${category.id}`}
                                         className="bg-white border-2 border-gray-200 text-industrial-blue px-6 py-3 font-bold uppercase tracking-widest hover:border-industrial-blue hover:bg-industrial-blue hover:text-white transition-colors text-sm flex items-center justify-center gap-2"
                                     >
-                                        View Spec Sheet
+                                        Load Charts
                                     </a>
                                 </div>
                             </div>

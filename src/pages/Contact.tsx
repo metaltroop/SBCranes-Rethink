@@ -75,7 +75,7 @@ export default function Contact() {
                         {/* Interactive Google Map */}
                         <div className="bg-gray-200 h-[300px] lg:h-[400px] rounded-2xl w-full overflow-hidden shadow-inner border border-gray-300 relative group">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.666495818228!2d77.27976237626927!3d28.527218975722425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1a5a069178b%3A0x675f6067b557088b!2sOkhla%20Phase%20I%2C%20Okhla%20Industrial%20Estate%2C%20New%20Delhi%2C%20Delhi%20110020!5e0!3m2!1sen!2sin!4v1709289291888!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.5032195712193!2d77.27852746959844!3d28.524769098482757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xafe67984c7c2061f%3A0xccdbd1c73ed50ae0!2sSB%20CRANES!5e1!3m2!1sen!2sin!4v1774543304603!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

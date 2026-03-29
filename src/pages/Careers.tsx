@@ -2,36 +2,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, CheckCircle2, Send, MapPin, Clock, ArrowRight } from 'lucide-react';
 import heroBg from '../assets/images/hero_bg.png';
 
-const openings = [
-    {
-        title: "Heavy Lifting Supervisor",
-        location: "Mumbai, Maharashtra",
-        type: "Full-Time",
-        experience: "5+ Years",
-        description: "Oversee complex lifting operations, ensuring safety compliance and team coordination."
-    },
-    {
-        title: "Mobile Crane Operator",
-        location: "Pan-India",
-        type: "Contract / Full-Time",
-        experience: "3+ Years",
-        description: "Operate hydraulic and crawler cranes for infrastructure projects. Valid license required."
-    },
-    {
-        title: "Safety Efficiency Officer",
-        location: "Gujarat Region",
-        type: "Full-Time",
-        experience: "4+ Years",
-        description: "Implement and monitor safety protocols on-site to ensure zero-incident operations."
-    },
-    {
-        title: "Maintenance Engineer (Hydraulics)",
-        location: "Pune Workshop",
-        type: "Full-Time",
-        experience: "3-6 Years",
-        description: "Diagnose and repair hydraulic systems for our fleet of Liebherr and Demag cranes."
-    }
-];
+const openings: { title: string; location: string; type: string; experience: string; description: string }[] = [];
 
 export default function Careers() {
     return (
@@ -107,35 +78,42 @@ export default function Careers() {
                                 Open <span className="text-industrial-blue">Positions</span>
                             </h3>
 
-                            <div className="space-y-4">
-                                {openings.map((job, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, y: 10 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="group bg-gray-50 border border-gray-100 p-6 hover:border-brand-red transition-all duration-300 rounded-lg hover:shadow-md"
-                                    >
-                                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                            <div>
-                                                <h4 className="text-xl font-bold text-dark-slate font-header uppercase mb-2 group-hover:text-industrial-blue transition-colors">{job.title}</h4>
-                                                <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-3">
-                                                    <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> {job.location}</span>
-                                                    <span className="flex items-center gap-1"><Briefcase className="h-4 w-4" /> {job.type}</span>
-                                                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {job.experience}</span>
+                            {openings.length > 0 ? (
+                                <div className="space-y-4">
+                                    {openings.map((job, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, y: 10 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: index * 0.1 }}
+                                            className="group bg-gray-50 border border-gray-100 p-6 hover:border-brand-red transition-all duration-300 rounded-lg hover:shadow-md"
+                                        >
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                                <div>
+                                                    <h4 className="text-xl font-bold text-dark-slate font-header uppercase mb-2 group-hover:text-industrial-blue transition-colors">{job.title}</h4>
+                                                    <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-3">
+                                                        <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> {job.location}</span>
+                                                        <span className="flex items-center gap-1"><Briefcase className="h-4 w-4" /> {job.type}</span>
+                                                        <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {job.experience}</span>
+                                                    </div>
+                                                    <p className="text-gray-600 text-sm">{job.description}</p>
                                                 </div>
-                                                <p className="text-gray-600 text-sm">{job.description}</p>
+                                                <div className="md:self-center">
+                                                    <a href="#apply" className="inline-flex items-center gap-2 text-sm font-bold uppercase text-industrial-blue hover:text-brand-red transition-colors">
+                                                        Apply Now <ArrowRight className="h-4 w-4" />
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div className="md:self-center">
-                                                <a href="#apply" className="inline-flex items-center gap-2 text-sm font-bold uppercase text-industrial-blue hover:text-brand-red transition-colors">
-                                                    Apply Now <ArrowRight className="h-4 w-4" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="bg-gray-50 border border-gray-100 p-8 rounded-lg text-center">
+                                    <h4 className="text-xl font-bold text-dark-slate font-header uppercase mb-2">No Current Openings</h4>
+                                    <p className="text-gray-600">We are not actively hiring for specific roles right now, but we are always looking for talented individuals. Please submit a general application below.</p>
+                                </div>
+                            )}
                         </div>
 
                     </div>
