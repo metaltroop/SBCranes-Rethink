@@ -114,9 +114,10 @@ export default function ProcessFlow({ onOpenModal }: ProcessFlowProps) {
                             <div className="relative mb-3 lg:mb-6">
                                 <div className="h-32 w-32 lg:h-40 lg:w-40 rounded-xl lg:rounded-2xl bg-brand-red border-4 border-white flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
                                     <img
-                                        src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400"
-                                        alt="Satisfied Client"
-                                        className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="/crane_images/Photo from Himanshu(9).jpg"
+                                        alt="Project Execution"
+                                        loading="lazy"
+                                        className="h-full w-full object-cover grayscale-[30%] brightness-90 contrast-125 saturate-150 group-hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
                                 {/* Success Badge */}

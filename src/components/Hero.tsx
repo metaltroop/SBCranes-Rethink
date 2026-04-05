@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Star, Truck, ShieldCheck, MapPin, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import heroBg from '../assets/images/hero_bg.png';
-import refineryImg from '../assets/images/refinery_project.png';
-import stadiumImg from '../assets/images/stadium_project.png';
-
-// Placeholder array using existing assets since generation quota was hit
-const heroImages = [heroBg, refineryImg, stadiumImg];
+// Using the real images provided by the client
+const heroImages = [
+    '/crane_images/Photo from Himanshu(5).jpg',
+    '/crane_images/Photo from Himanshu(3).jpg',
+    '/crane_images/Photo from Himanshu(4).jpg',
+    '/crane_images/Photo from Himanshu.jpg'
+];
 
 export default function Hero() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -61,8 +62,8 @@ export default function Hero() {
                         opacity: { duration: 1.5, ease: "easeInOut" },
                         scale: { duration: 10, ease: "linear" }
                     }}
-                    className="absolute inset-0 z-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${heroImages[currentImageIndex]})` }}
+                    className="absolute inset-0 z-0 bg-cover bg-center grayscale-[40%] brightness-[0.8] contrast-125 sepia-[20%]"
+                    style={{ backgroundImage: `url("${heroImages[currentImageIndex]}")` }}
                 />
             </AnimatePresence>
             <div className="absolute inset-0 z-0 bg-black/60" /> {/* Darker overlay for better text contrast */}

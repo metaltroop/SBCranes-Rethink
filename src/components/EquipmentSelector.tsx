@@ -3,14 +3,15 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/images/hero_bg.png';
-import crawlerImg from '../assets/images/crawler_crane.png';
+const heroBg = '/crane_images/Photo from Himanshu(9).jpg';
+const heroBgm = '/crane_images/Photo from Himanshu(15).jpg';
+const crawlerImg = '/crane_images/Photo from Himanshu(16).jpg';
 
 const tabs = [
     {
         id: 'mobile',
         label: 'Mobile Cranes',
-        image: heroBg,
+        image: heroBgm,
         specs: { capacity: '60 - 800 MT', brands: 'Liebherr, Demag, Sany', usage: 'Urban, Industrial, Refinery' }
     },
     {
@@ -109,8 +110,8 @@ export default function EquipmentSelector() {
                                         initial={{ scale: 1.1 }}
                                         animate={{ scale: 1 }}
                                         transition={{ duration: 4 }}
-                                        className="absolute inset-0 bg-cover bg-center"
-                                        style={{ backgroundImage: `url(${tabs[activeTab].image})` }}
+                                        className="absolute inset-0 bg-cover bg-center brightness-90 contrast-125 saturate-150 grayscale-[10%]"
+                                        style={{ backgroundImage: `url('${tabs[activeTab].image}')` }}
                                     />
                                     <div className="absolute inset-0 bg-industrial-blue/20 mix-blend-multiply" />
                                     {/* Diagonal Hazard Stripe Overlay */}

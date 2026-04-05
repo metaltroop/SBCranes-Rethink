@@ -1,9 +1,9 @@
 
-import refineryImg from '../assets/images/hmel.png';
-import stadiumImg from '../assets/images/jlm2.png';
-import crawlerImg from '../assets/images/crawler_crane.png';
+const refineryImg = '/crane_images/Photo from Himanshu(11).jpg';
+const stadiumImg = '/crane_images/Photo from Himanshu(12).jpg';
+const crawlerImg = '/crane_images/Photo from Himanshu(13).jpg';
 import { Link } from 'react-router-dom';
-import towerCraneImg from '../assets/images/buildingcrae.png';
+const towerCraneImg = '/crane_images/Photo from Himanshu(14).jpg';
 
 export default function ProjectGallery() {
     const projects = [
@@ -67,7 +67,7 @@ export default function ProjectGallery() {
                             className="group flex items-stretch bg-gray-800 border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-brand-red transition-all duration-300"
                         >
                             {/* Image - Conditional Order */}
-                            <div className={`w-32 h-auto flex-shrink-0 bg-cover bg-center ${index % 2 === 1 ? 'order-2' : 'order-1'}`} style={{ backgroundImage: `url(${project.image})` }}></div>
+                            <div className={`w-32 h-auto flex-shrink-0 bg-cover bg-center brightness-90 contrast-125 saturate-150 grayscale-[10%] ${index % 2 === 1 ? 'order-2' : 'order-1'}`} style={{ backgroundImage: `url('${project.image}')` }}></div>
 
                             {/* Content - Conditional Order */}
                             <div className={`p-4 flex flex-col justify-center flex-1 ${index % 2 === 1 ? 'order-1 text-right' : 'order-2 text-left'}`}>
@@ -87,7 +87,7 @@ export default function ProjectGallery() {
                             key={project.id}
                             className={`group relative overflow-hidden bg-gray-800 block ${project.desktopClasses}`}
                         >
-                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${project.image})` }}></div>
+                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 brightness-90 contrast-125 saturate-150 grayscale-[10%]" style={{ backgroundImage: `url('${project.image}')` }}></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 transition-opacity"></div>
                             <div className="absolute bottom-0 left-0 p-6">
                                 <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-brand-red">{project.category}</span>

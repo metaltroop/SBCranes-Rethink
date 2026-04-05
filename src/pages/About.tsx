@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { CheckCircle2, Award, ShieldCheck, Target, TrendingUp, HardHat } from 'lucide-react';
-import heroBg from '../assets/images/reliability.jpg';
-import crawlerImg from '../assets/images/excellence.png';
-import stadiumImg from '../assets/images/integrity.png';
-import refineryImg from '../assets/images/safet.png'
+const heroBg = '/crane_images/Photo from Himanshu(6).jpg';
+const crawlerImg = '/crane_images/Photo from Himanshu(7).jpg';
+const stadiumImg = '/crane_images/Photo from Himanshu(8).jpg';
+const refineryImg = '/crane_images/Photo from Himanshu(10).jpg';
 
 // Stats Component with Animation
 const StatItem = ({ label, value, suffix = "+" }: { label: string, value: number, suffix?: string }) => {
@@ -36,7 +36,7 @@ export default function About() {
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
             <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-dark-slate">
-                <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: `url(${heroBg})` }}></div>
+                <div className="absolute inset-0 bg-cover bg-center opacity-40 brightness-75 contrast-125 grayscale-[20%]" style={{ backgroundImage: `url('${heroBg}')` }}></div>
                 <div className="absolute inset-0 bg-linear-to-t from-dark-slate to-transparent"></div>
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
                     <motion.h1
@@ -92,7 +92,7 @@ export default function About() {
                     >
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                             <div className="absolute inset-0 bg-industrial-blue/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                            <img src={crawlerImg} alt="SB Cranes Fleet" className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700" />
+                            <img src={crawlerImg} alt="SB Cranes Fleet" loading="lazy" className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125 saturate-150 grayscale-[10%]" />
                             {/* Floating Badge */}
                             <div className="absolute bottom-6 right-6 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs border-l-4 border-brand-red hidden md:block">
                                 <p className="text-industrial-blue font-bold text-lg mb-1">Trusted Partner</p>
@@ -208,7 +208,8 @@ export default function About() {
                                         <img
                                             src={value.image}
                                             alt={`${value.title} at SB Cranes`}
-                                            className="w-full h-[300px] object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                            loading="lazy"
+                                            className="w-full h-[300px] object-cover transform group-hover:scale-110 transition-transform duration-700 brightness-90 contrast-125 saturate-150 grayscale-[10%]"
                                         />
                                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-20">
                                             <div className="flex items-center gap-3">

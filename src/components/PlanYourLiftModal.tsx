@@ -103,12 +103,31 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
         setFormState(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Form Submitted:', formState);
-        // Here you would typically send data to backend
-        onClose();
-        alert("Thank you! Our team will review your requirement and recommend the right solution.");
+        try {
+            const apiBaseUrl =
+                (import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:4000';
+
+            const res = await fetch(`${apiBaseUrl}/api/plan-lift`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...formState,
+                    knowsEquipment,
+                }),
+            });
+
+            if (!res.ok) {
+                const text = await res.text().catch(() => '');
+                throw new Error(text || `Request failed (${res.status})`);
+            }
+
+            onClose();
+            alert("Thank you! Our team will review your requirement and recommend the right solution.");
+        } catch (err: any) {
+            alert(err?.message || 'Failed to send request. Please try again.');
+        }
     };
 
     return (

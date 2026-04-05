@@ -76,6 +76,34 @@ export default function Footer() {
                     </div>
                 </div>
 
+                {/* Office Map */}
+                <div className="py-14 border-b border-white/10">
+                    <div className="flex items-center justify-between gap-6 mb-6 flex-col sm:flex-row">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-brand-red flex items-center gap-2">
+                            <MapPin className="h-5 w-5" />
+                            Office Location
+                        </h3>
+                        <a
+                            className="text-xs font-bold uppercase tracking-widest text-gray-300 hover:text-white transition-colors"
+                            href="https://www.google.com/maps?q=28.5253889,77.2835278"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Open in Google Maps
+                        </a>
+                    </div>
+
+                    <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <iframe
+                            title="SB Cranes office location"
+                            src="https://www.google.com/maps?q=28.5253889,77.2835278&z=16&output=embed"
+                            className="w-full h-72 md:h-80"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
+                    </div>
+                </div>
+
                 {/* Bottom Bar */}
                 <div className="pt-8 text-center text-xs font-bold uppercase tracking-widest text-gray-600 sm:text-left flex flex-col sm:flex-row justify-between items-center">
                     <p>&copy; 2026 SB Cranes. Heavy Lifting Solutions.</p>
