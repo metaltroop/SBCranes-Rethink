@@ -99,7 +99,7 @@ export default function Services() {
                     animate={{ scale: 1, opacity: 0.3 }}
                     transition={{ duration: 1.5 }}
                     className="absolute inset-0 bg-cover bg-center" 
-                    style={{ backgroundImage: `url(${heroBg})`, filter: 'grayscale(30%)' }}
+                    style={{ backgroundImage: `url(${heroBg})` }}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-dark-slate/80 via-dark-slate/50 to-[#fafafa]"></div>
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
@@ -196,18 +196,6 @@ export default function Services() {
                                                        {service.applications.map((app, i) => (
                                                            <span key={i} className="text-xs font-bold uppercase tracking-wider text-gray-600 bg-gray-50 border border-gray-200 px-4 py-2 rounded-xl hover:bg-white hover:border-brand-red hover:shadow-sm transition-all cursor-default text-center flex-grow sm:flex-grow-0 sm:text-left">
                                                                {app}
-                                                           </span>
-                                                       ))}
-                                                   </div>
-                                               </div>
-                                               <div>
-                                                   <h4 className="text-xs font-black text-dark-slate uppercase tracking-[0.15em] mb-6 border-b border-gray-200 pb-3 flex items-center justify-between">
-                                                       Capabilities <ArrowRight className="h-3 w-3 text-brand-red" />
-                                                   </h4>
-                                                   <div className="flex flex-wrap gap-2">
-                                                       {service.capabilities.map((cap, i) => (
-                                                           <span key={i} className="text-xs font-bold uppercase tracking-wider text-gray-600 bg-gray-50 border border-gray-200 px-4 py-2 rounded-xl hover:bg-white hover:border-brand-red hover:shadow-sm transition-all cursor-default text-center flex-grow sm:flex-grow-0 sm:text-left">
-                                                               {cap}
                                                            </span>
                                                        ))}
                                                    </div>

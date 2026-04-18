@@ -19,10 +19,10 @@ export default function Footer() {
                             Lifting with Precision
                         </p>
                         <div className="flex gap-4">
-                            {/* Socials Placeholders */}
+                            {/* Socials */}
                             <a href="#" className="flex h-10 w-10 items-center justify-center bg-white/10 hover:bg-brand-red hover:text-white transition-colors rounded-sm"><Facebook className="h-5 w-5" /></a>
                             <a href="#" className="flex h-10 w-10 items-center justify-center bg-white/10 hover:bg-brand-red hover:text-white transition-colors rounded-sm"><Instagram className="h-5 w-5" /></a>
-                            <a href="#" className="flex h-10 w-10 items-center justify-center bg-white/10 hover:bg-brand-red hover:text-white transition-colors rounded-sm"><Linkedin className="h-5 w-5" /></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors rounded-sm"><Linkedin className="h-5 w-5 fill-current" /></a>
                         </div>
                     </div>
 
@@ -44,18 +44,18 @@ export default function Footer() {
                         <ul className="space-y-6 text-sm text-gray-300">
                             <li className="flex gap-4">
                                 <MapPin className="h-6 w-6 text-brand-red shrink-0" />
-                                <span>SHED NO-IO DSIDC,Okhla Industrial Area,<br />Phase-1, New Delhi - 110020</span>
+                                <span className="font-medium text-gray-200">SHED NO-10 DSIDC, Okhla Industrial Area,<br />Phase-1, New Delhi - 110020</span>
                             </li>
                             <li className="flex gap-4">
                                 <Phone className="h-6 w-6 text-brand-red shrink-0" />
-                                <div>
+                                <div className="font-medium text-gray-200">
                                     <p>+91 98111 40311</p>
                                     <p>+91 98114 64927</p>
                                 </div>
                             </li>
                             <li className="flex gap-4">
                                 <Mail className="h-6 w-6 text-brand-red shrink-0" />
-                                <div>
+                                <div className="font-medium text-gray-200">
                                     <p>info@sbcranes.in</p>
                                     <p>sbcranes25@gmail.com</p>
                                 </div>

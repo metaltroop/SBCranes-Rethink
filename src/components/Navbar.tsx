@@ -45,7 +45,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                                 <img src={logo} alt="" />
                             </div>
                             <span className="text-xl font-bold uppercase tracking-tighter text-white font-header group-hover:text-brand-red transition-colors">
-                                Cranes
+                                SB <span className="text-brand-red group-hover:text-white transition-colors">Cranes</span>
                             </span>
                         </Link>
 

@@ -62,7 +62,7 @@ export default function Hero() {
                         opacity: { duration: 1.5, ease: "easeInOut" },
                         scale: { duration: 10, ease: "linear" }
                     }}
-                    className="absolute inset-0 z-0 bg-cover bg-center grayscale-[40%] brightness-[0.8] contrast-125 sepia-[20%]"
+                    className="absolute inset-0 z-0 bg-cover bg-center brightness-[0.9] transition-all duration-1000"
                     style={{ backgroundImage: `url("${heroImages[currentImageIndex]}")` }}
                 />
             </AnimatePresence>
@@ -95,39 +95,7 @@ export default function Hero() {
                             projects across India.
                         </p>
 
-                        {/* Trust Indicators */}
-                        <div className="mt-6 flex items-center gap-4 pl-6 opacity-100">
-                            <div className="flex -space-x-3">
-                                <img
-                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
-                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64"
-                                    alt="Client"
-                                />
-                                <img
-                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
-                                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64"
-                                    alt="Client"
-                                />
-                                <img
-                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64"
-                                    alt="Client"
-                                />
-                                <img
-                                    className="h-10 w-10 rounded-full border-2 border-dark-slate object-cover"
-                                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=64&h=64"
-                                    alt="Client"
-                                />
-                            </div>
-                            <div className="flex flex-col">
-                                <div className="flex text-brand-red">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <Star key={i} className="h-4 w-4 fill-current" />
-                                    ))}
-                                </div>
-                                <span className="text-sm font-bold text-white uppercase tracking-wider">over 1000+ happy clients</span>
-                            </div>
-                        </div>
+
                     </motion.div>
                 </div>
 

@@ -95,7 +95,7 @@ export default function Projects() {
                     animate={{ scale: 1, opacity: 0.3 }}
                     transition={{ duration: 1.5 }}
                     className="absolute inset-0 bg-cover bg-center" 
-                    style={{ backgroundImage: `url(${heroBg})`, filter: 'grayscale(30%)' }}
+                    style={{ backgroundImage: `url(${heroBg})` }}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-dark-slate/80 via-dark-slate/50 to-[#fafafa]"></div>
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">

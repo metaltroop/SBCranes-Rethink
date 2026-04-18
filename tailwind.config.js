@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'industrial-blue': '#003366',
+        'industrial-blue': '#0f4c81',
         'safety-yellow': '#FFD700',
-        'steel-grey': '#f3f4f6',
-        'dark-slate': '#1e293b',
+        'steel-grey': '#f8fafc',
+        'dark-slate': '#0f172a',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
-        header: ['Oswald', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        header: ['Outfit', 'sans-serif'],
       }
     },
   },

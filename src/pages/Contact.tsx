@@ -41,8 +41,8 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold uppercase text-dark-slate mb-2">Headquarters</h4>
-                                        <p className="text-gray-600 leading-relaxed max-w-xs">
-                                            SHED -10 DSIDC, OKHLA INDUSTRIAL AREA, OKHLA PHASE-1, NEW DELHI-110020
+                                        <p className="text-gray-600 leading-relaxed max-w-xs font-medium">
+                                            SHED NO-10 DSIDC, Okhla Industrial Area,<br />Phase-1, New Delhi - 110020
                                         </p>
                                     </div>
                                 </div>

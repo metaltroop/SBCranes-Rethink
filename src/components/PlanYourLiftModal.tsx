@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Check, ChevronDown } from 'lucide-react';
+import logo from '../assets/images/logo.png';
 
 interface PlanYourLiftModalProps {
     isOpen: boolean;
@@ -153,12 +154,17 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                             className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white shadow-2xl pointer-events-auto" // Re-enable pointer events
                         >
                             {/* Header */}
-                            <div className="sticky top-0 z-10 flex items-center justify-between bg-industrial-blue px-6 py-4 text-white">
-                                <div>
-                                    <h2 className="text-2xl font-bold uppercase tracking-tight font-header border-b-4 border-brand-red inline-block pb-1">
-                                        Plan Your Lift
-                                    </h2>
-                                    <p className="text-xs text-gray-300 mt-1 uppercase tracking-widest">Connect with our engineering team</p>
+                            <div className="sticky top-0 z-10 flex items-center justify-between bg-industrial-blue px-6 py-4 text-white shadow-md border-b-4 border-brand-red">
+                                <div className="flex flex-row items-center gap-5">
+                                    <div className="h-14 w-14 bg-white flex items-center justify-center rounded shadow-inner">
+                                        <img src={logo} alt="SB Cranes" className="w-12 h-12 object-contain" />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight font-header">
+                                            Plan Your Lift
+                                        </h2>
+                                        <p className="text-xs text-blue-200 mt-1 uppercase tracking-widest font-medium">Connect with our engineering team</p>
+                                    </div>
                                 </div>
                                 <button
                                     onClick={onClose}
@@ -190,8 +196,8 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                                     {/* Row 2 */}
                                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                                         <div className="space-y-1">
-                                            <label className="text-xs font-bold uppercase text-gray-600">Phone *</label>
-                                            <input name="phone" type="tel" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                            <label className="text-xs font-bold uppercase text-gray-600">Phone</label>
+                                            <input name="phone" type="tel" className="w-full bg-gray-50 border-b-2 border-gray-200 focus:bg-white focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
                                         </div>
                                         <div className="space-y-1">
                                             <label className="text-xs font-bold uppercase text-gray-600">Email Address *</label>
@@ -202,12 +208,12 @@ export default function PlanYourLiftModal({ isOpen, onClose }: PlanYourLiftModal
                                     {/* Row 3 */}
                                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                                         <div className="space-y-1">
-                                            <label className="text-xs font-bold uppercase text-gray-600">Company *</label>
-                                            <input name="company" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                            <label className="text-xs font-bold uppercase text-gray-600">Company</label>
+                                            <input name="company" className="w-full bg-gray-50 border-b-2 border-gray-200 focus:bg-white focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
                                         </div>
                                         <div className="space-y-1">
-                                            <label className="text-xs font-bold uppercase text-gray-600">Job Title *</label>
-                                            <input name="jobTitle" required className="w-full bg-gray-100 border-b-2 border-transparent focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
+                                            <label className="text-xs font-bold uppercase text-gray-600">Job Title</label>
+                                            <input name="jobTitle" className="w-full bg-gray-50 border-b-2 border-gray-200 focus:bg-white focus:border-industrial-blue px-4 py-3 outline-none transition-colors" onChange={handleChange} />
                                         </div>
                                     </div>
 

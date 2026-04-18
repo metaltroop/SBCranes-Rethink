@@ -17,12 +17,12 @@ export default function Home({ onOpenModal }: HomeProps) {
         <>
             <Hero />
             
+            <StatsStrip />
+            <EquipmentSelector />
             <ProjectGallery />
             <ChallengesSolutions />
             <BenefitsGrid />
             <ProcessFlow onOpenModal={onOpenModal} />
-            <StatsStrip />
-            <EquipmentSelector />
             <Testimonials />
             <TrustBanner />
         </>
